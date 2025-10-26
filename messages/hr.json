@@ -11,12 +11,12 @@
     "hero": {
       "title": "Mobilna kućica Lana",
       "cta": "Ugrabi termin",
-      "ctaSubtext": "Tko prvi—njegov odmor! Ostali gledaju fotke."
+      "ctaSubtext": "Tko prvi—njegov odmor! Ostali samo gledaju fotke."
     },
     "about": {
-      "title": "IDEALNO ZA OBITELJSKI ODMOR SA MALIŠANIMA",
-      "subtitle": "U slučaju da se ne želite osjećati kao stranac u prostoru koji platite za Vaš odmor.\n\nOnda je ovo za Vas.",
-      "description": "Uživajte u potpunoj privatnosti i miru. Check-in se obavlja na recepciji kampa, nemate brige hoće li netko biti kod kuće ili ne, spavamo li možda ili kakve smo volje trenutno. Ključeve od kućice imate samo Vi i ne dolazimo Vam u inspekciju sobe kada ste na plaži. 😉\n\nDaljinski od klime je Vaš tijekom boravka bez nadoplate i prigovaranja, a ako potrošite baterije, javite, poslat ćemo druge.\n\nKućica se nalazi u kampu Dalmacija (Privlaka) koji ima svoju pješčanu plažu do koje se dolazi prolazom kroz kamp, a nema prometnih ulica koje Vam zadaju glavobolje. Vaši mališani mogu se nesmetano kretati od kuće pa sve do pješčane plaže. Nakon ulaska u more nastavlja se idila. Čeka Vas dugačak plićak idealan za igru i opuštanje, a za ljubitelje dubljeg mora – i toga ima u neposrednoj blizini.\n\nParkirno mjesto Vam je osigurano ispred parcele te je sve dostupno pješice, što znači da se i Vaš limeni ljubimac napokon može odmoriti, jer sve potrebno možete obaviti i bez njega."
+      "title": "IDEALNO ZA OBITELJSKI ODMOR S MALIŠANIMA",
+      "subtitle": "U slučaju da se ne želite osjećati kao stranac u prostoru koji platite za Vaš odmor. Onda je ovo za Vas!",
+      "description": "Uživajte u potpunoj privatnosti i miru. Check-in se obavlja na recepciji kampa, nemate brige hoće li netko biti kod kuće ili ne, spavamo li možda ili kakve smo volje trenutno. Ključeve od kućice imate samo Vi i ne dolazimo Vam u inspekciju sobe kada ste na plaži. 😉\n\nDaljinski od klime je Vaš tijekom boravka, bez nadoplate i prigovaranja, a ako potrošite baterije, javite — poslat ćemo druge.\n\nKućica se nalazi u kampu Dalmacija (Privlaka), koji ima svoju pješčanu plažu do koje se dolazi prolazom kroz kamp, a nema prometnih ulica koje Vam zadaju glavobolje. Vaši mališani mogu se nesmetano kretati od kuće pa sve do pješčane plaže. Nakon ulaska u more idila se nastavlja: čeka Vas dugačak plićak, idealan za igru i opuštanje, a za ljubitelje dubljeg mora – i to je u neposrednoj blizini.\n\nParkirno mjesto Vam je osigurano ispred parcele te je sve dostupno pješice, što znači da se i Vaš limeni ljubimac napokon može odmoriti, jer sve potrebno možete obaviti i bez njega."
     },
     "whyUs": {
       "title": "Zašto baš kod nas?",
@@ -36,7 +36,7 @@
         },
         {
           "title": "Vaš limeni ljubimac se odmara",
-          "description": "Sve potrebno možete obaviti i bez auta. Dućan, ljekarna, medicinska ordinacija - sve na 100-400m. Auto može konačno odmoriti!"
+          "description": "Sve potrebno možete obaviti i bez auta. Dućan, ljekarna - sve na 100-400m. Auto može konačno odmoriti!"
         }
       ]
     },
@@ -52,7 +52,7 @@
     }
   },
   "accommodation": {
-    "title": "Ukratko: gdje spavamo, što imamo i koliko je more blizu",
+    "title": "Ukratko: što imamo i koliko je more blizu",
     "details": {
       "title": "Detalji",
       "capacity": "Kapacitet",
@@ -79,24 +79,12 @@
       "playgroundValue": "U sklopu kampa",
       "restaurant": "Restorani",
       "restaurantValue": "U sklopu kampa",
-      "medical": "Medicinska ordinacija",
-      "medicalValue": "100 m",
       "shop": "Dućan Tommy",
       "shopValue": "400 m",
       "pharmacy": "Ljekarna",
       "pharmacyValue": "400 m",
       "mudBeach": "Plaža s ljekovitim blatom",
       "mudBeachValue": "400 m"
-    },
-    "houseRules": {
-      "title": "Naš način rada",
-      "subtitle": "Na ovaj način smo radili do sada pa ćemo tako i nastaviti.",
-      "checkIn": "Check-in: Na recepciji kampa (bez brige hoćemo li spavati)",
-      "checkOut": "Check-out: 10:00",
-      "keys": "Ključevi: Samo Vi ih imate - bez inspekcija",
-      "ac": "Klima: Daljinski je Vaš bez nadoplate",
-      "privacy": "Privatnost: Uživajte kao kod kuće!",
-      "parking": "Parking: Osigurano mjesto ispred parcele"
     },
     "campFeatures": {
       "title": "Sadržaji kampa",
@@ -128,13 +116,14 @@
     }
   },
   "availability": {
-    "title": "Dostupnost i rezervacija",
+    "title": "Dostupnost & rezervacija",
     "description": "Provjerite dostupnost i pošaljite upit za rezervaciju",
     "calendar": {
       "title": "Kalendar zauzetosti",
       "legend": {
         "available": "Dostupno",
-        "booked": "Zauzeto"
+        "booked": "Zauzeto",
+        "selected": "Odabrano"
       },
       "selectDates": "Odaberite datume dolaska i odlaska"
     },
@@ -149,7 +138,9 @@
       "guests": "Broj osoba",
       "guestsPlaceholder": "Odaberite broj osoba",
       "checkIn": "Dolazak",
+      "checkInPlaceholder": "dd/mm/yyyy",
       "checkOut": "Odlazak",
+      "checkOutPlaceholder": "dd/mm/yyyy",
       "message": "Poruka (opcionalno)",
       "messagePlaceholder": "Dodatne informacije ili pitanja...",
       "submit": "Pošalji upit",
@@ -167,7 +158,9 @@
       "guestsMax": "Maksimalno 6 osoba",
       "checkInRequired": "Datum dolaska je obavezan",
       "checkOutRequired": "Datum odlaska je obavezan",
-      "checkOutAfterCheckIn": "Datum odlaska mora biti nakon datuma dolaska"
+      "checkOutAfterCheckIn": "Datum odlaska mora biti nakon datuma dolaska",
+      "checkInInvalid": "Neispravan format datuma (koristite dd/mm/yyyy)",
+      "checkOutInvalid": "Neispravan format datuma (koristite dd/mm/yyyy)"
     }
   },
   "contact": {

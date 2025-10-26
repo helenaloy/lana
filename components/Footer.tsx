@@ -40,9 +40,34 @@ export default function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* About */}
           <div className="lg:col-span-2">
-            <h3 className="mb-4 font-display text-xl font-bold text-gray-900">
-              Mobile Home Lana
-            </h3>
+            <div className="mb-4 flex items-center gap-3">
+              {/* Hand-drawn house icon */}
+              <svg
+                className="h-8 w-8 text-primary-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {/* Roof (hand-drawn style) */}
+                <path d="M3.5 9l8.5-5 8.5 5" strokeLinecap="round" strokeLinejoin="round"/>
+                {/* Left wall */}
+                <path d="M3.5 9v9h4v-4" strokeLinecap="round" strokeLinejoin="round"/>
+                {/* Right wall */}
+                <path d="M20.5 9v9h-4v-4" strokeLinecap="round" strokeLinejoin="round"/>
+                {/* Bottom */}
+                <path d="M7.5 18h9" strokeLinecap="round"/>
+                {/* Door (left side) */}
+                <path d="M5 14h2.5v4" strokeLinecap="round" strokeLinejoin="round"/>
+                {/* Window (right side) */}
+                <circle cx="16" cy="13" r="1.5" strokeLinecap="round"/>
+                <path d="M14 13h4M16 11.5v3" strokeLinecap="round"/>
+              </svg>
+              <h3 className="font-display text-xl font-bold text-primary-600">
+                Mobile Home Lana
+              </h3>
+            </div>
             <p className="mb-4 text-gray-600">
               {locale === 'hr' 
                 ? 'Bijeg u prirodu bez odricanja: klima radi, roštilj miriši, a brige ostaju u prtljažniku.'
@@ -65,14 +90,14 @@ export default function Footer() {
 
           {/* Legal Information */}
           <div>
-            <h4 className="mb-4 font-heading font-bold text-gray-900">
+            <h4 className="mb-4 text-xl font-heading font-bold text-gray-900">
               {locale === 'hr' ? 'Pravne informacije' : 'Legal Information'}
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               <li>
                 <a
                   href={`/${locale}/impressum`}
-                  className="text-gray-600 hover:text-primary-600"
+                  className="text-lg text-gray-600 hover:text-primary-600"
                 >
                   {locale === 'hr' ? 'Impressum' : 'Impressum'}
                 </a>
@@ -80,7 +105,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`/${locale}/privacy-policy`}
-                  className="text-gray-600 hover:text-primary-600"
+                  className="text-lg text-gray-600 hover:text-primary-600"
                 >
                   {locale === 'hr' ? 'Politika privatnosti' : 'Privacy Policy'}
                 </a>
@@ -88,7 +113,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`/${locale}/cookie-policy`}
-                  className="text-gray-600 hover:text-primary-600"
+                  className="text-lg text-gray-600 hover:text-primary-600"
                 >
                   {locale === 'hr' ? 'Politika kolačića' : 'Cookie Policy'}
                 </a>

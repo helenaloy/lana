@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
@@ -8,9 +8,30 @@ import { inquirySchema, type InquiryFormData } from '@/lib/validators';
 
 type Props = {
   locale: string;
+  prefillDates?: { checkIn: string; checkOut: string };
 };
 
-export default function InquiryForm({ locale }: Props) {
+// Helper function to convert ISO date (yyyy-mm-dd) to dd/mm/yyyy format
+const formatDateForInput = (isoDate: string): string => {
+  if (!isoDate) return '';
+  const parts = isoDate.split('-');
+  if (parts.length === 3) {
+    return `${parts[2]}/${parts[1]}/${parts[0]}`;
+  }
+  return isoDate;
+};
+
+// Helper function to convert dd/mm/yyyy to ISO format for validation
+const convertToISO = (dateStr: string): string => {
+  if (!dateStr) return '';
+  const parts = dateStr.split('/');
+  if (parts.length === 3) {
+    return `${parts[2]}-${parts[1]}-${parts[0]}`;
+  }
+  return dateStr;
+};
+
+export default function InquiryForm({ locale, prefillDates }: Props) {
   const t = useTranslations('availability.form');
   const tValidation = useTranslations('availability.validation');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -20,22 +41,46 @@ export default function InquiryForm({ locale }: Props) {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors },
   } = useForm<InquiryFormData>({
     resolver: zodResolver(inquirySchema),
+    defaultValues: prefillDates ? {
+      checkIn: prefillDates.checkIn,
+      checkOut: prefillDates.checkOut,
+    } : undefined,
   });
+
+  // Update form when prefillDates change
+  useEffect(() => {
+    if (prefillDates?.checkIn) {
+      const formattedDate = formatDateForInput(prefillDates.checkIn);
+      setValue('checkIn', formattedDate);
+    }
+    if (prefillDates?.checkOut) {
+      const formattedDate = formatDateForInput(prefillDates.checkOut);
+      setValue('checkOut', formattedDate);
+    }
+  }, [prefillDates, setValue]);
 
   const onSubmit = async (data: InquiryFormData) => {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
     try {
+      // Convert dd/mm/yyyy to ISO format before sending
+      const dataToSend = {
+        ...data,
+        checkIn: convertToISO(data.checkIn),
+        checkOut: convertToISO(data.checkOut),
+      };
+
       const response = await fetch('/api/inquiry', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ ...data, locale }),
+        body: JSON.stringify({ ...dataToSend, locale }),
       });
 
       if (response.ok) {
@@ -56,7 +101,7 @@ export default function InquiryForm({ locale }: Props) {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
       {/* Name */}
       <div>
-        <label htmlFor="name" className="mb-1 block text-sm font-medium text-gray-700">
+        <label htmlFor="name" className="mb-2 block text-xl font-bold text-gray-700">
           {t('name')}
         </label>
         <input
@@ -64,16 +109,16 @@ export default function InquiryForm({ locale }: Props) {
           type="text"
           id="name"
           placeholder={t('namePlaceholder')}
-          className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200"
+          className="w-full rounded-lg border border-gray-300 px-4 py-4 text-xl focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200"
         />
         {errors.name && (
-          <p className="mt-1 text-sm text-red-600">{tValidation(errors.name.message!)}</p>
+          <p className="mt-1 text-xl text-red-600">{tValidation(errors.name.message!)}</p>
         )}
       </div>
 
       {/* Email */}
       <div>
-        <label htmlFor="email" className="mb-1 block text-sm font-medium text-gray-700">
+        <label htmlFor="email" className="mb-2 block text-xl font-bold text-gray-700">
           {t('email')}
         </label>
         <input
@@ -81,16 +126,16 @@ export default function InquiryForm({ locale }: Props) {
           type="email"
           id="email"
           placeholder={t('emailPlaceholder')}
-          className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200"
+          className="w-full rounded-lg border border-gray-300 px-4 py-4 text-xl focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200"
         />
         {errors.email && (
-          <p className="mt-1 text-sm text-red-600">{tValidation(errors.email.message!)}</p>
+          <p className="mt-1 text-xl text-red-600">{tValidation(errors.email.message!)}</p>
         )}
       </div>
 
       {/* Phone */}
       <div>
-        <label htmlFor="phone" className="mb-1 block text-sm font-medium text-gray-700">
+        <label htmlFor="phone" className="mb-2 block text-xl font-bold text-gray-700">
           {t('phone')}
         </label>
         <input
@@ -98,22 +143,22 @@ export default function InquiryForm({ locale }: Props) {
           type="tel"
           id="phone"
           placeholder={t('phonePlaceholder')}
-          className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200"
+          className="w-full rounded-lg border border-gray-300 px-4 py-4 text-xl focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200"
         />
         {errors.phone && (
-          <p className="mt-1 text-sm text-red-600">{tValidation(errors.phone.message!)}</p>
+          <p className="mt-1 text-xl text-red-600">{tValidation(errors.phone.message!)}</p>
         )}
       </div>
 
       {/* Number of Guests */}
       <div>
-        <label htmlFor="guests" className="mb-1 block text-sm font-medium text-gray-700">
+        <label htmlFor="guests" className="mb-2 block text-xl font-bold text-gray-700">
           {t('guests')}
         </label>
         <select
           {...register('guests')}
           id="guests"
-          className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200"
+          className="w-full rounded-lg border border-gray-300 px-4 py-4 text-xl focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200"
         >
           <option value="">{t('guestsPlaceholder')}</option>
           {[1, 2, 3, 4, 5, 6].map((num) => (
@@ -123,49 +168,54 @@ export default function InquiryForm({ locale }: Props) {
           ))}
         </select>
         {errors.guests && (
-          <p className="mt-1 text-sm text-red-600">{tValidation(errors.guests.message!)}</p>
+          <p className="mt-1 text-xl text-red-600">{tValidation(errors.guests.message!)}</p>
         )}
       </div>
 
-      {/* Check-in Date */}
-      <div>
-        <label htmlFor="checkIn" className="mb-1 block text-sm font-medium text-gray-700">
-          {t('checkIn')}
-        </label>
-        <input
-          {...register('checkIn')}
-          type="date"
-          id="checkIn"
-          className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200"
-        />
-        {errors.checkIn && (
-          <p className="mt-1 text-sm text-red-600">
-            {tValidation(errors.checkIn.message!)}
-          </p>
-        )}
-      </div>
+      {/* Check-in and Check-out Dates - Side by Side */}
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {/* Check-in Date */}
+        <div>
+          <label htmlFor="checkIn" className="mb-2 block text-xl font-bold text-gray-700">
+            {t('checkIn')}
+          </label>
+          <input
+            {...register('checkIn')}
+            type="text"
+            id="checkIn"
+            placeholder={t('checkInPlaceholder')}
+            className="w-full rounded-lg border border-gray-300 px-4 py-4 text-xl focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200"
+          />
+          {errors.checkIn && (
+            <p className="mt-1 text-xl text-red-600">
+              {tValidation(errors.checkIn.message!)}
+            </p>
+          )}
+        </div>
 
-      {/* Check-out Date */}
-      <div>
-        <label htmlFor="checkOut" className="mb-1 block text-sm font-medium text-gray-700">
-          {t('checkOut')}
-        </label>
-        <input
-          {...register('checkOut')}
-          type="date"
-          id="checkOut"
-          className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200"
-        />
-        {errors.checkOut && (
-          <p className="mt-1 text-sm text-red-600">
-            {tValidation(errors.checkOut.message!)}
-          </p>
-        )}
+        {/* Check-out Date */}
+        <div>
+          <label htmlFor="checkOut" className="mb-2 block text-xl font-bold text-gray-700">
+            {t('checkOut')}
+          </label>
+          <input
+            {...register('checkOut')}
+            type="text"
+            id="checkOut"
+            placeholder={t('checkOutPlaceholder')}
+            className="w-full rounded-lg border border-gray-300 px-4 py-4 text-xl focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200"
+          />
+          {errors.checkOut && (
+            <p className="mt-1 text-xl text-red-600">
+              {tValidation(errors.checkOut.message!)}
+            </p>
+          )}
+        </div>
       </div>
 
       {/* Message */}
       <div>
-        <label htmlFor="message" className="mb-1 block text-sm font-medium text-gray-700">
+        <label htmlFor="message" className="mb-2 block text-xl font-bold text-gray-700">
           {t('message')}
         </label>
         <textarea
@@ -173,7 +223,7 @@ export default function InquiryForm({ locale }: Props) {
           id="message"
           rows={4}
           placeholder={t('messagePlaceholder')}
-          className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200"
+          className="w-full rounded-lg border border-gray-300 px-4 py-4 text-xl focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-200"
         />
       </div>
 
@@ -181,7 +231,7 @@ export default function InquiryForm({ locale }: Props) {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full rounded-lg bg-primary-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-primary-700 disabled:cursor-not-allowed disabled:opacity-50"
+        className="w-full rounded-lg bg-primary-600 px-6 py-4 text-2xl font-bold text-white transition-colors hover:bg-primary-700 disabled:cursor-not-allowed disabled:opacity-50"
       >
         {isSubmitting ? t('submitting') : t('submit')}
       </button>

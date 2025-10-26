@@ -17,17 +17,17 @@
     "instagram": "https://instagram.com/mobilehome_lana"
   },
   "coordinates": {
-    "lat": 44.2144,
-    "lng": 15.1836
+    "lat": 44.256415,
+    "lng": 15.126116
   },
   "amenities": [
     {
       "icon": "family",
-      "label_hr": "4+2 osobe",
-      "label_en": "4+2 people"
+      "label_hr": "Kapacitet 4+2",
+      "label_en": "Capacity 4+2"
     },
     {
-      "icon": "family",
+      "icon": "bedroom",
       "label_hr": "2 spavaće sobe",
       "label_en": "2 bedrooms"
     },
@@ -62,17 +62,12 @@
       "label_en": "Sandy Beach Through Camp"
     },
     {
-      "icon": "parking",
-      "label_hr": "Parking ispred parcele",
-      "label_en": "Parking in Front of Plot"
-    },
-    {
       "icon": "privacy",
       "label_hr": "Potpuna privatnost - ključevi samo Vaši",
       "label_en": "Complete Privacy - Keys Only Yours"
     },
     {
-      "icon": "family",
+      "icon": "childsafe",
       "label_hr": "Sigurno za djecu - bez prometnica",
       "label_en": "Safe for Kids - No Traffic"
     },

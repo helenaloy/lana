@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
@@ -13,6 +13,7 @@ type Props = {
 export default function GalleryGrid({ locale }: Props) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const galleryContainerRef = useRef<HTMLDivElement | null>(null);
 
   const slides = galleryData.map((image) => ({
     src: image.src,
@@ -22,6 +23,18 @@ export default function GalleryGrid({ locale }: Props) {
   const openLightbox = (index: number) => {
     setCurrentIndex(index);
     setLightboxOpen(true);
+  };
+
+  const scrollLeft = () => {
+    if (galleryContainerRef.current) {
+      galleryContainerRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (galleryContainerRef.current) {
+      galleryContainerRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+    }
   };
 
   if (galleryData.length === 0) {
@@ -35,35 +48,52 @@ export default function GalleryGrid({ locale }: Props) {
   return (
     <>
       <div className="relative">
+        {/* Left arrow button */}
+        <button
+          onClick={scrollLeft}
+          className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:bg-gray-50 hover:shadow-xl"
+          aria-label="Previous"
+        >
+          <svg className="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
         {/* Scrollable horizontal gallery */}
-        <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+        <div 
+          ref={galleryContainerRef}
+          className="flex gap-6 overflow-x-auto pb-6 scrollbar-hide"
+          style={{ scrollBehavior: 'smooth' }}
+        >
           {galleryData.map((image, index) => (
             <button
               key={index}
               onClick={() => openLightbox(index)}
-              className="group relative flex-shrink-0 overflow-hidden rounded-lg bg-gray-200"
-              style={{ width: '300px', height: '200px' }}
+              className="group relative flex-shrink-0 overflow-hidden rounded-lg bg-gray-200 shadow-md transition-transform hover:scale-105"
+              style={{ width: '400px', height: '280px' }}
             >
               <Image
                 src={image.src}
                 alt={locale === 'hr' ? image.alt_hr : image.alt_en}
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
-                sizes="300px"
+                sizes="400px"
               />
               <div className="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-20" />
             </button>
           ))}
         </div>
-        
-        {/* Scroll indicators */}
-        <div className="mt-4 flex justify-center gap-2">
-          <div className="h-2 w-2 rounded-full bg-gray-300"></div>
-          <div className="h-2 w-2 rounded-full bg-gray-300"></div>
-          <div className="h-2 w-2 rounded-full bg-gray-300"></div>
-          <div className="h-2 w-2 rounded-full bg-gray-300"></div>
-          <div className="h-2 w-2 rounded-full bg-gray-300"></div>
-        </div>
+
+        {/* Right arrow button */}
+        <button
+          onClick={scrollRight}
+          className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:bg-gray-50 hover:shadow-xl"
+          aria-label="Next"
+        >
+          <svg className="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
       </div>
 
       <Lightbox

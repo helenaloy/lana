@@ -16,6 +16,7 @@ const iconMap: Record<string, string> = {
   grill: '🔥',
   privacy: '🔑',
   family: '👨‍👩‍👧‍👦',
+  bedroom: '🛏️',
   shallow: '🏊‍♂️',
   waterpark: '💦',
   playground: '🎠',
@@ -23,6 +24,7 @@ const iconMap: Record<string, string> = {
   shop: '🛒',
   medical: '⚕️',
   bathroom: '🚿',
+  childsafe: '🧒',
 };
 
 export default function AmenityList({ locale }: Props) {
@@ -34,7 +36,7 @@ export default function AmenityList({ locale }: Props) {
           className="flex flex-col items-center rounded-xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-6 text-center shadow-md transition-all hover:scale-105 hover:shadow-lg"
         >
           <div className="mb-3 text-5xl">{iconMap[amenity.icon] || '✓'}</div>
-          <h3 className="font-medium leading-snug text-gray-900">
+          <h3 className="text-lg font-medium leading-snug text-gray-900 md:text-xl">
             {locale === 'hr' ? amenity.label_hr : amenity.label_en}
           </h3>
         </div>

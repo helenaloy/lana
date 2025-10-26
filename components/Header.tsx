@@ -23,7 +23,6 @@ export default function Header() {
     { name: t('home'), href: '#home', id: 'home' },
     { name: t('accommodation'), href: '#accommodation', id: 'accommodation' },
     { name: t('gallery'), href: '#gallery', id: 'gallery' },
-    { name: t('location'), href: '#location', id: 'location' },
     { name: t('availability'), href: '#availability', id: 'availability' },
     { name: t('contact'), href: '#contact', id: 'contact' },
   ];
@@ -108,17 +107,30 @@ export default function Header() {
             onClick={(e) => handleClick(e, '#home')}
             className="flex cursor-pointer items-center gap-2"
           >
-            {/* Mobile Home Icon */}
+            {/* Hand-drawn house icon */}
             <svg
               className={`h-8 w-8 md:h-10 md:w-10 transition-colors duration-300 ${
                 isScrolled ? 'text-primary-600' : 'text-white drop-shadow-lg'
               }`}
-              fill="currentColor"
+              fill="none"
               viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M8 12h8M8 16h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              {/* Roof (hand-drawn style) */}
+              <path d="M3.5 9l8.5-5 8.5 5" strokeLinecap="round" strokeLinejoin="round"/>
+              {/* Left wall */}
+              <path d="M3.5 9v9h4v-4" strokeLinecap="round" strokeLinejoin="round"/>
+              {/* Right wall */}
+              <path d="M20.5 9v9h-4v-4" strokeLinecap="round" strokeLinejoin="round"/>
+              {/* Bottom */}
+              <path d="M7.5 18h9" strokeLinecap="round"/>
+              {/* Door (left side) */}
+              <path d="M5 14h2.5v4" strokeLinecap="round" strokeLinejoin="round"/>
+              {/* Window (right side) */}
+              <circle cx="16" cy="13" r="1.5" strokeLinecap="round"/>
+              <path d="M14 13h4M16 11.5v3" strokeLinecap="round"/>
             </svg>
             <span className={`font-display text-2xl font-bold md:text-3xl transition-colors duration-300 ${
               isScrolled ? 'text-primary-600' : 'text-white drop-shadow-lg'
@@ -134,7 +146,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleClick(e, item.href)}
-                className={`cursor-pointer font-heading transition-colors duration-300 ${
+                className={`cursor-pointer font-heading text-lg md:text-xl transition-colors duration-300 ${
                   isActive(item.id)
                     ? `font-bold ${isScrolled ? 'text-primary-600' : 'text-white drop-shadow-lg'}`
                     : isScrolled 
@@ -196,7 +208,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleClick(e, item.href)}
-                className={`block cursor-pointer font-heading px-4 py-3 transition-colors duration-300 ${
+                className={`block cursor-pointer font-heading text-lg px-4 py-3 transition-colors duration-300 ${
                   isActive(item.id)
                     ? `font-bold ${
                         isScrolled 

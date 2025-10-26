@@ -9,8 +9,7 @@ import metaData from '@/content/meta.json';
 import AmenityList from '@/components/AmenityList';
 import GalleryGrid from '@/components/GalleryGrid';
 import MapComponent from '@/components/MapComponent';
-import InquiryForm from '@/components/InquiryForm';
-import AvailabilityCalendar from '@/components/AvailabilityCalendar';
+import AvailabilitySection from '@/components/AvailabilitySection';
 
 type Props = {
   params: { locale: string };
@@ -44,8 +43,6 @@ export default function HomePage({ params: { locale } }: Props) {
   const tAvailability = useTranslations('availability');
   const tContact = useTranslations('contact');
 
-  const houseRules = locale === 'hr' ? siteData.house_rules_hr : siteData.house_rules_en;
-
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -56,7 +53,7 @@ export default function HomePage({ params: { locale } }: Props) {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/20230430_171345.jpg"
+            src="/images/terasa1_MH_Lana.jpg"
             alt={locale === 'hr' ? 'Mobilna kućica Lana' : 'Mobile Home Lana'}
             fill
             className="object-cover"
@@ -81,18 +78,15 @@ export default function HomePage({ params: { locale } }: Props) {
       </section>
 
       {/* About Section */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white py-12 md:py-16">
         <div className="container px-4">
           <div className="mx-auto max-w-4xl">
             <h2 className="mb-4 text-center text-3xl font-bold text-gray-900 md:text-4xl">
               {t('about.title')}
             </h2>
             <div className="mb-6 text-center">
-              <p className="mx-auto mb-2 max-w-2xl text-xl text-gray-600 md:text-2xl">
-                {t('about.subtitle').split('\n\n')[0]}
-              </p>
               <p className="mx-auto max-w-2xl text-xl font-semibold text-primary-600 md:text-2xl">
-                {t('about.subtitle').split('\n\n')[1]}
+                {t('about.subtitle')}
               </p>
             </div>
             <div className="rounded-lg bg-gray-50 p-8 text-lg text-gray-700 whitespace-pre-line leading-relaxed">
@@ -103,7 +97,7 @@ export default function HomePage({ params: { locale } }: Props) {
       </section>
 
       {/* Accommodation Section */}
-      <section id="accommodation" className="scroll-mt-20 bg-gradient-to-b from-gray-50 to-white py-16 md:py-24">
+      <section id="accommodation" className="scroll-mt-20 bg-gradient-to-b from-gray-50 to-white py-12 md:py-16">
         <div className="container px-4">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">{tAccommodation('title')}</h2>
@@ -113,27 +107,11 @@ export default function HomePage({ params: { locale } }: Props) {
           <div className="mb-16">
             <AmenityList locale={locale} />
           </div>
-
-          {/* House Rules */}
-          <div className="rounded-2xl bg-gradient-to-br from-primary-50 to-primary-100 p-8 md:p-12">
-            <h3 className="mb-4 text-center text-2xl font-bold text-gray-900 md:text-3xl">{tAccommodation('houseRules.title')}</h3>
-            <p className="mx-auto mb-8 max-w-2xl text-center text-lg text-gray-700">{tAccommodation('houseRules.subtitle')}</p>
-            <div className="mx-auto max-w-3xl rounded-xl bg-white p-8 shadow-lg">
-              <ul className="space-y-4">
-                {houseRules.map((rule, index) => (
-                  <li key={index} className="flex items-start rounded-lg bg-gray-50 p-4">
-                    <span className="mr-3 text-2xl">{['😃', '🏠', '🔑', '❄️', '👨‍👩‍👧‍👦', '🅿️', '😎'][index] || '✓'}</span>
-                    <span className="flex-1 text-gray-700">{rule}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Gallery Section */}
-      <section id="gallery" className="scroll-mt-20 bg-gradient-to-b from-white to-gray-50 py-16 md:py-24">
+      <section id="gallery" className="scroll-mt-20 bg-gradient-to-b from-white to-gray-50 py-12 md:py-16">
         <div className="container px-4">
           <h2 className="mb-4 text-center text-3xl font-bold text-gray-900 md:text-4xl">{tGallery('title')}</h2>
           <p className="mx-auto mb-12 max-w-2xl text-center text-xl text-gray-600 md:text-2xl">{tGallery('description')}</p>
@@ -142,31 +120,22 @@ export default function HomePage({ params: { locale } }: Props) {
       </section>
 
       {/* Availability Section */}
-      <section id="availability" className="scroll-mt-20 bg-white py-16 md:py-24">
+      <section id="availability" className="scroll-mt-20 bg-white py-12 md:py-16">
         <div className="container px-4">
           <h2 className="mb-4 text-center text-3xl font-bold text-gray-900 md:text-4xl">{tAvailability('title')}</h2>
           <p className="mx-auto mb-12 max-w-2xl text-center text-xl text-gray-600 md:text-2xl">{tAvailability('description')}</p>
           
-          <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2">
-            {/* Calendar */}
-            <div>
-              <h3 className="mb-6 text-2xl font-bold text-gray-900">
-                {tAvailability('calendar.title')}
-              </h3>
-              <AvailabilityCalendar locale={locale} />
-            </div>
-
-            {/* Inquiry Form */}
-            <div>
-              <h3 className="mb-6 text-2xl font-bold text-gray-900">{tAvailability('form.title')}</h3>
-              <InquiryForm locale={locale} />
-            </div>
+          <div className="mx-auto max-w-6xl">
+            <h3 className="mb-6 text-center text-2xl font-bold text-gray-900 md:text-3xl">
+              {tAvailability('calendar.title')}
+            </h3>
+            <AvailabilitySection locale={locale} />
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="scroll-mt-20 bg-gradient-to-br from-gray-50 to-gray-100 py-16 md:py-24">
+      <section id="contact" className="scroll-mt-20 bg-gradient-to-br from-gray-50 to-gray-100 py-12 md:py-16">
         <div className="container px-4">
           <h2 className="mb-4 text-center text-3xl font-bold text-gray-900 md:text-4xl">{tContact('title')}</h2>
           <p className="mx-auto mb-12 max-w-2xl text-center text-xl text-gray-600 md:text-2xl">{tContact('description')}</p>
@@ -175,29 +144,29 @@ export default function HomePage({ params: { locale } }: Props) {
             <div className="grid gap-8 lg:grid-cols-2">
               {/* Contact Information */}
               <div className="rounded-lg bg-white p-8 shadow-md">
-                <h3 className="mb-6 text-2xl font-bold text-gray-900">{tContact('info.title')}</h3>
-                <div className="space-y-4">
+                <h3 className="mb-6 text-2xl font-bold text-gray-900 md:text-3xl">{tContact('info.title')}</h3>
+                <div className="space-y-6">
                   <div>
-                    <h4 className="mb-1 font-semibold text-gray-700">{tContact('info.phone')}</h4>
+                    <h4 className="mb-2 text-xl font-bold text-gray-700">{tContact('info.phone')}</h4>
                     <a
                       href={`tel:${siteData.contact.phone}`}
-                      className="text-primary-600 hover:underline"
+                      className="text-xl text-primary-600 hover:underline"
                     >
                       {siteData.contact.phone}
                     </a>
                   </div>
                   <div>
-                    <h4 className="mb-1 font-semibold text-gray-700">{tContact('info.email')}</h4>
+                    <h4 className="mb-2 text-xl font-bold text-gray-700">{tContact('info.email')}</h4>
                     <a
                       href={`mailto:${siteData.contact.email}`}
-                      className="text-primary-600 hover:underline"
+                      className="text-xl text-primary-600 hover:underline"
                     >
                       {siteData.contact.email}
                     </a>
                   </div>
                   <div>
-                    <h4 className="mb-1 font-semibold text-gray-700">{tContact('info.address')}</h4>
-                    <address className="not-italic text-gray-700">
+                    <h4 className="mb-2 text-xl font-bold text-gray-700">{tContact('info.address')}</h4>
+                    <address className="not-italic text-xl text-gray-700">
                       <p>{siteData.address.street}</p>
                       <p>{siteData.address.city}</p>
                       <p>{siteData.address.country}</p>
@@ -208,23 +177,11 @@ export default function HomePage({ params: { locale } }: Props) {
 
               {/* Map and Directions */}
               <div className="rounded-lg bg-white p-8 shadow-md">
-                <h3 className="mb-6 text-2xl font-bold text-gray-900">
-                  {locale === 'hr' ? 'Kako do nas' : 'How to reach us'}
+                <h3 className="mb-6 text-2xl font-bold text-gray-900 md:text-3xl">
+                  {locale === 'hr' ? 'LOKACIJA' : 'LOCATION'}
                 </h3>
-                <div className="mb-6 overflow-hidden rounded-lg shadow-lg">
+                <div className="overflow-hidden rounded-lg shadow-lg">
                   <MapComponent />
-                </div>
-                <div className="space-y-3">
-                  <div>
-                    <h4 className="mb-1 font-semibold text-gray-700">
-                      {locale === 'hr' ? 'Kako do nas:' : 'How to reach us:'}
-                    </h4>
-                    <p className="text-gray-700">
-                      {locale === 'hr' 
-                        ? 'Kamp Dalmacija se nalazi u Privlaci, samo nekoliko minuta vožnje od Zadra. Slijedite znakove za kamp nakon ulaska u Privlaku.'
-                        : 'Camp Dalmacija is located in Privlaka, just a few minutes drive from Zadar. Follow the camp signs after entering Privlaka.'}
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>

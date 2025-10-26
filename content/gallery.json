@@ -1,48 +1,38 @@
 [
   {
-    "src": "/images/IMG_2456.jpeg",
+    "src": "/images/terasa1_MH_Lana.jpg",
     "alt_hr": "Mobilna kućica Lana - vanjski pogled",
     "alt_en": "Mobile Home Lana - exterior view"
   },
   {
-    "src": "/images/IMG_2457.jpeg",
+    "src": "/images/terasa2_MH_Lana.jpeg",
     "alt_hr": "Velika natkrivena terasa 24m²",
     "alt_en": "Large covered terrace 24m²"
   },
   {
-    "src": "/images/IMG_2458.jpeg",
-    "alt_hr": "Unutarnji prostor - dnevni boravak",
-    "alt_en": "Interior - living area"
+    "src": "/images/terasa3_MH_Lana.jpeg",
+    "alt_hr": "Natkrivena terasa",
+    "alt_en": "Covered terrace"
   },
   {
-    "src": "/images/IMG_2459.jpeg",
+    "src": "/images/spavaca1_MH_Lana.jpeg",
     "alt_hr": "Spavaća soba s udobnim krevetima",
     "alt_en": "Bedroom with comfortable beds"
   },
   {
-    "src": "/images/IMG_2460.jpeg",
-    "alt_hr": "Potpuno opremljena kuhinja",
-    "alt_en": "Fully equipped kitchen"
+    "src": "/images/spavaca2_MH_Lana.jpeg",
+    "alt_hr": "Druga spavaća soba",
+    "alt_en": "Second bedroom"
   },
   {
-    "src": "/images/IMG_2463.jpeg",
+    "src": "/images/kupaona_MH_Lana.jpeg",
     "alt_hr": "Kupaonica s modernim sadržajima",
     "alt_en": "Bathroom with modern amenities"
   },
   {
-    "src": "/images/IMG_2464.jpeg",
-    "alt_hr": "Prostor za objedovanje na terasi",
-    "alt_en": "Dining area on the terrace"
-  },
-  {
-    "src": "/images/IMG_2465.jpeg",
-    "alt_hr": "Detalj uređenja mobilne kućice",
-    "alt_en": "Mobile home interior detail"
-  },
-  {
-    "src": "/images/IMG_2466.jpeg",
-    "alt_hr": "Dodatni prostor za odmor",
-    "alt_en": "Additional relaxation space"
+    "src": "/images/djecje_igraliste_MH_Lana.jpeg",
+    "alt_hr": "Okolica kampa - dječje igralište",
+    "alt_en": "Camp surroundings - children's playground"
   }
 ]
 
