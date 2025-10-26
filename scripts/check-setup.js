@@ -128,6 +128,6 @@ if (checks.failed.length > 0) {
 } else if (checks.warnings.length > 0) {
   console.log('⚠️  Setup complete with warnings. Review warnings above.\n');
 } else {
-  console.log('✅ All checks passed! You\'re ready to run: pnpm dev\n');
+  console.log('✅ All checks passed! You\'re ready to run: npm run dev\n');
 }
 
