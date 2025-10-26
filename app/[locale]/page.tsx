@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -7,7 +7,6 @@ import siteData from '@/content/site.json';
 import galleryData from '@/content/gallery.json';
 import metaData from '@/content/meta.json';
 import AmenityList from '@/components/AmenityList';
-import WhyUs from '@/components/WhyUs';
 import GalleryGrid from '@/components/GalleryGrid';
 import MapComponent from '@/components/MapComponent';
 import InquiryForm from '@/components/InquiryForm';
@@ -16,6 +15,10 @@ import AvailabilityCalendar from '@/components/AvailabilityCalendar';
 type Props = {
   params: { locale: string };
 };
+
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'hr' }];
+}
 
 export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
   const meta = locale === 'hr' ? metaData.home.title_hr : metaData.home.title_en;
@@ -34,6 +37,7 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
 }
 
 export default function HomePage({ params: { locale } }: Props) {
+  setRequestLocale(locale);
   const t = useTranslations('home');
   const tAccommodation = useTranslations('accommodation');
   const tGallery = useTranslations('gallery');
@@ -93,13 +97,6 @@ export default function HomePage({ params: { locale } }: Props) {
         </div>
       </section>
 
-      {/* Why Us Section */}
-      <section className="bg-gray-50 py-16 md:py-24">
-        <div className="container px-4">
-          <WhyUs />
-        </div>
-      </section>
-
       {/* Accommodation Section */}
       <section id="accommodation" className="scroll-mt-20 bg-gradient-to-b from-gray-50 to-white py-16 md:py-24">
         <div className="container px-4">
@@ -149,80 +146,6 @@ export default function HomePage({ params: { locale } }: Props) {
           <div className="mb-16">
             <h3 className="mb-12 text-3xl font-bold text-gray-900">{tAccommodation('amenities.title')}</h3>
             <AmenityList locale={locale} />
-          </div>
-
-          {/* Camp Features */}
-          <div className="mb-16 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 p-8 md:p-12">
-            <h3 className="mb-8 text-3xl font-bold text-gray-900">{tAccommodation('campFeatures.title')}</h3>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              <div className="rounded-lg bg-white p-4 shadow-sm">
-                <div className="flex items-center">
-                  <span className="mr-3 text-2xl">🏖️</span>
-                  <span className="font-medium text-gray-900">{tAccommodation('campFeatures.beach')}</span>
-                </div>
-              </div>
-              <div className="rounded-lg bg-white p-4 shadow-sm">
-                <div className="flex items-center">
-                  <span className="mr-3 text-2xl">🏊‍♂️</span>
-                  <span className="font-medium text-gray-900">{tAccommodation('campFeatures.shallow')}</span>
-                </div>
-              </div>
-              <div className="rounded-lg bg-white p-4 shadow-sm">
-                <div className="flex items-center">
-                  <span className="mr-3 text-2xl">💦</span>
-                  <span className="font-medium text-gray-900">{tAccommodation('campFeatures.waterpark')}</span>
-                </div>
-              </div>
-              <div className="rounded-lg bg-white p-4 shadow-sm">
-                <div className="flex items-center">
-                  <span className="mr-3 text-2xl">🎠</span>
-                  <span className="font-medium text-gray-900">{tAccommodation('campFeatures.playground')}</span>
-                </div>
-              </div>
-              <div className="rounded-lg bg-white p-4 shadow-sm">
-                <div className="flex items-center">
-                  <span className="mr-3 text-2xl">🍽️</span>
-                  <span className="font-medium text-gray-900">{tAccommodation('campFeatures.restaurants')}</span>
-                </div>
-              </div>
-              <div className="rounded-lg bg-white p-4 shadow-sm">
-                <div className="flex items-center">
-                  <span className="mr-3 text-2xl">🚸</span>
-                  <span className="font-medium text-gray-900">{tAccommodation('campFeatures.safety')}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Distances */}
-          <div className="mb-16">
-            <h3 className="mb-8 text-3xl font-bold text-gray-900">{tAccommodation('distances.title')}</h3>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              <div className="flex items-center justify-between rounded-lg border border-gray-200 p-4">
-                <span className="font-medium text-gray-900">{tAccommodation('distances.beach')}</span>
-                <span className="text-primary-600">{tAccommodation('distances.beachValue')}</span>
-              </div>
-              <div className="flex items-center justify-between rounded-lg border border-gray-200 p-4">
-                <span className="font-medium text-gray-900">{tAccommodation('distances.medical')}</span>
-                <span className="text-primary-600">{tAccommodation('distances.medicalValue')}</span>
-              </div>
-              <div className="flex items-center justify-between rounded-lg border border-gray-200 p-4">
-                <span className="font-medium text-gray-900">{tAccommodation('distances.shop')}</span>
-                <span className="text-primary-600">{tAccommodation('distances.shopValue')}</span>
-              </div>
-              <div className="flex items-center justify-between rounded-lg border border-gray-200 p-4">
-                <span className="font-medium text-gray-900">{tAccommodation('distances.pharmacy')}</span>
-                <span className="text-primary-600">{tAccommodation('distances.pharmacyValue')}</span>
-              </div>
-              <div className="flex items-center justify-between rounded-lg border border-gray-200 p-4">
-                <span className="font-medium text-gray-900">{tAccommodation('distances.mudBeach')}</span>
-                <span className="text-primary-600">{tAccommodation('distances.mudBeachValue')}</span>
-              </div>
-              <div className="flex items-center justify-between rounded-lg border border-gray-200 p-4">
-                <span className="mr-2 text-xl">🚗</span>
-                <span className="font-medium text-gray-900">{locale === 'hr' ? 'Auto može odmoriti!' : 'Car can rest!'}</span>
-              </div>
-            </div>
           </div>
 
           {/* House Rules */}

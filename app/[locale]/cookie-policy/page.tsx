@@ -1,11 +1,15 @@
 import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
 type Props = {
   params: { locale: string };
 };
+
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'hr' }];
+}
 
 export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'cookies' });
@@ -17,6 +21,7 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
 }
 
 export default function CookiePolicyPage({ params: { locale } }: Props) {
+  setRequestLocale(locale);
   const t = useTranslations('cookies');
 
   return (

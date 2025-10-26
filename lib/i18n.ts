@@ -14,3 +14,6 @@ export default getRequestConfig(async ({ locale }) => {
   };
 });
 
+// Export for static rendering
+export { setRequestLocale } from 'next-intl/server';
+
