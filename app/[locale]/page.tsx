@@ -107,49 +107,10 @@ export default function HomePage({ params: { locale } }: Props) {
         <div className="container px-4">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-4xl font-bold text-gray-900">{tAccommodation('title')}</h2>
-            <p className="text-xl text-gray-600">{tAccommodation('description')}</p>
           </div>
 
-          {/* Details Grid */}
+          {/* Combined Amenities & Details */}
           <div className="mb-16">
-            <h3 className="mb-8 text-3xl font-bold text-gray-900">{tAccommodation('details.title')}</h3>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <div className="rounded-lg border border-gray-200 bg-gradient-to-br from-blue-50 to-blue-100 p-6">
-                <div className="mb-2 text-2xl">👨‍👩‍👧‍👦</div>
-                <h4 className="mb-2 font-semibold text-gray-900">{tAccommodation('details.capacity')}</h4>
-                <p className="text-gray-700">{tAccommodation('details.capacityValue')}</p>
-              </div>
-              <div className="rounded-lg border border-gray-200 bg-gradient-to-br from-purple-50 to-purple-100 p-6">
-                <div className="mb-2 text-2xl">🛏️</div>
-                <h4 className="mb-2 font-semibold text-gray-900">{tAccommodation('details.bedrooms')}</h4>
-                <p className="text-gray-700">{tAccommodation('details.bedroomsValue')}</p>
-              </div>
-              <div className="rounded-lg border border-gray-200 bg-gradient-to-br from-cyan-50 to-cyan-100 p-6">
-                <div className="mb-2 text-2xl">🚿</div>
-                <h4 className="mb-2 font-semibold text-gray-900">{tAccommodation('details.bathroom')}</h4>
-                <p className="text-gray-700">{tAccommodation('details.bathroomValue')}</p>
-              </div>
-              <div className="rounded-lg border border-gray-200 bg-gradient-to-br from-green-50 to-green-100 p-6">
-                <div className="mb-2 text-2xl">🍳</div>
-                <h4 className="mb-2 font-semibold text-gray-900">{tAccommodation('details.kitchen')}</h4>
-                <p className="text-gray-700">{tAccommodation('details.kitchenValue')}</p>
-              </div>
-              <div className="rounded-lg border border-gray-200 bg-gradient-to-br from-amber-50 to-amber-100 p-6">
-                <div className="mb-2 text-2xl">🏡</div>
-                <h4 className="mb-2 font-semibold text-gray-900">{tAccommodation('details.terrace')}</h4>
-                <p className="text-gray-700">{tAccommodation('details.terraceValue')}</p>
-              </div>
-              <div className="rounded-lg border border-gray-200 bg-gradient-to-br from-pink-50 to-pink-100 p-6">
-                <div className="mb-2 text-2xl">🅿️</div>
-                <h4 className="mb-2 font-semibold text-gray-900">{tAccommodation('houseRules.parking')}</h4>
-                <p className="text-gray-700">{locale === 'hr' ? 'Ispred parcele' : 'In front of plot'}</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Amenities */}
-          <div className="mb-16">
-            <h3 className="mb-12 text-3xl font-bold text-gray-900">{tAccommodation('amenities.title')}</h3>
             <AmenityList locale={locale} />
           </div>
 

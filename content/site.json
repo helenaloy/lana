@@ -22,9 +22,34 @@
   },
   "amenities": [
     {
+      "icon": "family",
+      "label_hr": "4+2 osobe",
+      "label_en": "4+2 people"
+    },
+    {
+      "icon": "family",
+      "label_hr": "2 spavaće sobe",
+      "label_en": "2 bedrooms"
+    },
+    {
+      "icon": "bathroom",
+      "label_hr": "1 kupaonica s tušem",
+      "label_en": "1 bathroom with shower"
+    },
+    {
+      "icon": "kitchen",
+      "label_hr": "Potpuno opremljena kuhinja",
+      "label_en": "Fully equipped kitchen"
+    },
+    {
       "icon": "terrace",
       "label_hr": "Velika natkrivena terasa 24m²",
       "label_en": "Large Covered Terrace 24m²"
+    },
+    {
+      "icon": "parking",
+      "label_hr": "Parking ispred parcele",
+      "label_en": "Parking in Front of Plot"
     },
     {
       "icon": "air-conditioning",

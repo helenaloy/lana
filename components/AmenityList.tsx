@@ -22,6 +22,7 @@ const iconMap: Record<string, string> = {
   restaurant: '🍽️',
   shop: '🛒',
   medical: '⚕️',
+  bathroom: '🚿',
 };
 
 export default function AmenityList({ locale }: Props) {
