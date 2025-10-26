@@ -88,10 +88,10 @@ export default function HomePage({ params: { locale } }: Props) {
               {t('about.title')}
             </h2>
             <div className="mb-6 text-center">
-              <p className="text-xl font-semibold text-gray-700 md:text-2xl">
+              <p className="mx-auto mb-2 max-w-2xl text-xl text-gray-600 md:text-2xl">
                 {t('about.subtitle').split('\n\n')[0]}
               </p>
-              <p className="mt-2 text-xl font-bold text-primary-600 md:text-2xl">
+              <p className="mx-auto max-w-2xl text-xl font-semibold text-primary-600 md:text-2xl">
                 {t('about.subtitle').split('\n\n')[1]}
               </p>
             </div>
@@ -106,7 +106,7 @@ export default function HomePage({ params: { locale } }: Props) {
       <section id="accommodation" className="scroll-mt-20 bg-gradient-to-b from-gray-50 to-white py-16 md:py-24">
         <div className="container px-4">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-4xl font-bold text-gray-900">{tAccommodation('title')}</h2>
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">{tAccommodation('title')}</h2>
           </div>
 
           {/* Combined Amenities & Details */}
@@ -116,7 +116,7 @@ export default function HomePage({ params: { locale } }: Props) {
 
           {/* House Rules */}
           <div className="rounded-2xl bg-gradient-to-br from-primary-50 to-primary-100 p-8 md:p-12">
-            <h3 className="mb-4 text-center text-3xl font-bold text-gray-900">{tAccommodation('houseRules.title')}</h3>
+            <h3 className="mb-4 text-center text-2xl font-bold text-gray-900 md:text-3xl">{tAccommodation('houseRules.title')}</h3>
             <p className="mx-auto mb-8 max-w-2xl text-center text-lg text-gray-700">{tAccommodation('houseRules.subtitle')}</p>
             <div className="mx-auto max-w-3xl rounded-xl bg-white p-8 shadow-lg">
               <ul className="space-y-4">
@@ -135,8 +135,8 @@ export default function HomePage({ params: { locale } }: Props) {
       {/* Gallery Section */}
       <section id="gallery" className="scroll-mt-20 bg-gradient-to-b from-white to-gray-50 py-16 md:py-24">
         <div className="container px-4">
-          <h2 className="mb-4 text-center text-4xl font-bold text-gray-900">{tGallery('title')}</h2>
-          <p className="mx-auto mb-12 max-w-2xl text-center text-xl text-gray-600">{tGallery('description')}</p>
+          <h2 className="mb-4 text-center text-3xl font-bold text-gray-900 md:text-4xl">{tGallery('title')}</h2>
+          <p className="mx-auto mb-12 max-w-2xl text-center text-xl text-gray-600 md:text-2xl">{tGallery('description')}</p>
           <GalleryGrid locale={locale} />
         </div>
       </section>
@@ -144,8 +144,8 @@ export default function HomePage({ params: { locale } }: Props) {
       {/* Availability Section */}
       <section id="availability" className="scroll-mt-20 bg-white py-16 md:py-24">
         <div className="container px-4">
-          <h2 className="mb-4 text-center text-4xl font-bold text-gray-900">{tAvailability('title')}</h2>
-          <p className="mx-auto mb-12 max-w-2xl text-center text-xl text-gray-600">{tAvailability('description')}</p>
+          <h2 className="mb-4 text-center text-3xl font-bold text-gray-900 md:text-4xl">{tAvailability('title')}</h2>
+          <p className="mx-auto mb-12 max-w-2xl text-center text-xl text-gray-600 md:text-2xl">{tAvailability('description')}</p>
           
           <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2">
             {/* Calendar */}
@@ -168,8 +168,8 @@ export default function HomePage({ params: { locale } }: Props) {
       {/* Contact Section */}
       <section id="contact" className="scroll-mt-20 bg-gradient-to-br from-gray-50 to-gray-100 py-16 md:py-24">
         <div className="container px-4">
-          <h2 className="mb-4 text-center text-4xl font-bold text-gray-900">{tContact('title')}</h2>
-          <p className="mx-auto mb-12 max-w-2xl text-center text-xl text-gray-600">{tContact('description')}</p>
+          <h2 className="mb-4 text-center text-3xl font-bold text-gray-900 md:text-4xl">{tContact('title')}</h2>
+          <p className="mx-auto mb-12 max-w-2xl text-center text-xl text-gray-600 md:text-2xl">{tContact('description')}</p>
           
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-8 lg:grid-cols-2">
