@@ -83,14 +83,14 @@ export default function HomePage({ params: { locale } }: Props) {
       {/* About Section */}
       <section className="bg-white py-16 md:py-24">
         <div className="container px-4">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-4 text-center text-3xl font-bold text-gray-900 md:text-4xl">
               {t('about.title')}
             </h2>
-            <h3 className="mb-6 text-xl font-semibold text-primary-600 md:text-2xl">
+            <h3 className="mb-6 text-center text-xl font-semibold text-primary-600 md:text-2xl">
               {t('about.subtitle')}
             </h3>
-            <div className="text-lg text-gray-600 whitespace-pre-line">
+            <div className="rounded-lg bg-gray-50 p-8 text-lg text-gray-700 whitespace-pre-line leading-relaxed">
               {t('about.description')}
             </div>
           </div>
