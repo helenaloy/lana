@@ -1,0 +1,334 @@
+{
+  "navigation": {
+    "home": "Home",
+    "accommodation": "Accommodation",
+    "gallery": "Gallery",
+    "location": "Location",
+    "availability": "Availability",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Mobile Home Lana",
+      "subtitle": "Ideal for family breaks with little ones - two- and four-legged",
+      "cta": "Grab your dates",
+      "ctaSubtext": "First come, first served! Others just look at photos."
+    },
+    "about": {
+      "title": "In case you don't want to feel like a stranger in the space you pay for your vacation.",
+      "subtitle": "Then this is for you!",
+      "description": "Mobile home 4+2\n\nEnjoy your privacy.\nCheck-in is done at camp reception, you don't have to worry whether someone will be at home or not, whether we're sleeping or what mood we're in right now\n\nOnly you have the keys to the mobile home, we don't come to inspect your room when you're at the beach\n\n-The AC remote is yours during your stay without extra charge and complaints, if you use up the batteries let us know and we'll send new ones.\n\nThis is how we've been working so far and we'll continue this way.\nWe gave priority to guests from last year and filled most of the dates.\n\nWhat we have to offer you is a newly set up vacation home with a large covered terrace of 24 m.\nThe house is located in Camp Dalmacija in Privlaka which has its own sandy beach that you reach by walking through the camp, there are no busy streets that give you headaches. Your little ones can move freely from the house all the way to the sandy beach. After entering the sea, the idyll continues. The sea is 100 meters wide shallow, but if you like deeper sea there's that too."
+    },
+    "whyUs": {
+      "title": "Why choose us?",
+      "subtitle": "This is for you if you don't want to feel like a stranger in the space you're paying for.",
+      "reasons": [
+        {
+          "title": "No waiting at home reception",
+          "description": "Check-in at camp reception. No worries about whether we're home, sleeping, or what mood we're in."
+        },
+        {
+          "title": "Privacy - real privacy!",
+          "description": "Only you have the keys. We won't inspect your room while you're at the beach. Enjoy as if you were at home!"
+        },
+        {
+          "title": "AC without bargaining",
+          "description": "The AC remote is yours during your stay without extra charge or complaints. If batteries run out, let us know - we'll send new ones!"
+        },
+        {
+          "title": "Your metal friend rests",
+          "description": "You can do everything without your car. Shop, pharmacy, medical office - all 100-400m away. Your car can finally rest!"
+        }
+      ]
+    },
+    "features": {
+      "title": "What We Offer"
+    },
+    "galleryPreview": {
+      "title": "See Our Accommodation",
+      "viewAll": "View All Photos"
+    },
+    "locationPreview": {
+      "title": "Camp Dalmacija, Privlaka"
+    }
+  },
+  "accommodation": {
+    "title": "Mobile Home 4+2",
+    "description": "Newly set up vacation home - Enjoy your privacy!",
+    "details": {
+      "title": "Details",
+      "capacity": "Capacity",
+      "capacityValue": "4+2 people",
+      "bedrooms": "Bedrooms",
+      "bedroomsValue": "2 bedrooms",
+      "bathroom": "Bathroom",
+      "bathroomValue": "1 bathroom with shower",
+      "kitchen": "Kitchen",
+      "kitchenValue": "Fully equipped",
+      "terrace": "Terrace",
+      "terraceValue": "24m² covered"
+    },
+    "amenities": {
+      "title": "Amenities"
+    },
+    "distances": {
+      "title": "Distances",
+      "beach": "Sandy beach",
+      "beachValue": "Through camp",
+      "waterpark": "Water park",
+      "waterparkValue": "Within camp",
+      "playground": "Playground",
+      "playgroundValue": "Within camp",
+      "restaurant": "Restaurants",
+      "restaurantValue": "Within camp",
+      "medical": "Medical office",
+      "medicalValue": "100 m",
+      "shop": "Tommy Shop",
+      "shopValue": "400 m",
+      "pharmacy": "Pharmacy",
+      "pharmacyValue": "400 m",
+      "mudBeach": "Healing mud beach",
+      "mudBeachValue": "400 m"
+    },
+    "houseRules": {
+      "title": "How we work",
+      "subtitle": "This is how we've been working and will continue to work.",
+      "checkIn": "Check-in: At camp reception (no worries if we're sleeping)",
+      "checkOut": "Check-out: 10:00 AM",
+      "keys": "Keys: Only you have them - no inspections",
+      "ac": "AC: Remote is yours without extra charge",
+      "privacy": "Privacy: Enjoy as if at home!",
+      "parking": "Parking: Secured spot in front of plot"
+    },
+    "campFeatures": {
+      "title": "Camp Facilities",
+      "beach": "Own sandy beach",
+      "shallow": "Shallow sea 100m - perfect for children",
+      "waterpark": "Water park",
+      "playground": "Children's playground",
+      "restaurants": "Restaurants",
+      "safety": "No traffic - safe for children"
+    }
+  },
+  "gallery": {
+    "title": "Gallery",
+    "description": "View photos of our mobile home and surroundings",
+    "noImages": "No images available"
+  },
+  "location": {
+    "title": "Location",
+    "description": "Find us on the map",
+    "address": {
+      "title": "Address",
+      "street": "Example Street 123",
+      "city": "12345 Example City",
+      "country": "Croatia"
+    },
+    "directions": {
+      "title": "Directions",
+      "text": "Parking is available right next to the mobile home. Access is possible for all vehicles."
+    }
+  },
+  "availability": {
+    "title": "Availability & Booking",
+    "description": "Check availability and send a booking inquiry",
+    "calendar": {
+      "title": "Availability Calendar",
+      "legend": {
+        "available": "Available",
+        "booked": "Booked"
+      },
+      "selectDates": "Select check-in and check-out dates"
+    },
+    "form": {
+      "title": "Send Inquiry",
+      "name": "Full Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+385 91 546 0088",
+      "guests": "Number of Guests",
+      "guestsPlaceholder": "Select number of guests",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "message": "Message (optional)",
+      "messagePlaceholder": "Additional information or questions...",
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "success": "Your inquiry has been sent successfully! We'll get back to you soon.",
+      "error": "An error occurred. Please try again."
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email format",
+      "phoneRequired": "Phone is required",
+      "guestsRequired": "Number of guests is required",
+      "guestsMin": "Minimum 1 guest",
+      "guestsMax": "Maximum 6 guests",
+      "checkInRequired": "Check-in date is required",
+      "checkOutRequired": "Check-out date is required",
+      "checkOutAfterCheckIn": "Check-out date must be after check-in date"
+    }
+  },
+  "contact": {
+    "title": "Contact & Location",
+    "description": "Feel free to contact us with any questions",
+    "info": {
+      "title": "Contact Information",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address"
+    },
+    "form": {
+      "title": "Send a Message",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send"
+    }
+  },
+  "footer": {
+    "description": "Escape to nature without compromise: AC works, grill smells, hospitality standard.",
+    "rights": "All rights reserved",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use"
+    }
+  },
+  "impressum": {
+    "title": "Impressum",
+    "description": "Company information and contact details",
+    "company": {
+      "title": "Company Information",
+      "name": "Company Name",
+      "address": "Registered Address",
+      "court": "Competent Court",
+      "mbs": "MBS",
+      "oib": "OIB",
+      "euid": "EUID",
+      "status": "Status"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email",
+      "phone": "Phone"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "content": "All information on this website is accurate at the time of publication. The company reserves the right to make changes without prior notice."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "How we collect, use and protect your personal data",
+    "dataController": {
+      "title": "Data Controller",
+      "content": "The controller of your personal data is:"
+    },
+    "dataCollection": {
+      "title": "Data Collection",
+      "content": "We collect the following personal data:",
+      "types": {
+        "name": "Full name",
+        "email": "Email address",
+        "phone": "Phone number",
+        "dates": "Check-in and check-out dates",
+        "guests": "Number of guests"
+      }
+    },
+    "dataUsage": {
+      "title": "Data Usage",
+      "content": "We use your personal data for:",
+      "purposes": {
+        "booking": "Booking process",
+        "communication": "Communication with you",
+        "service": "Service provision",
+        "legal": "Legal compliance"
+      }
+    },
+    "dataRetention": {
+      "title": "Data Retention",
+      "content": "We retain your personal data for as long as necessary to fulfill the purpose for which it was collected, in accordance with applicable laws."
+    },
+    "rights": {
+      "title": "Your Rights",
+      "content": "You have the following rights regarding your personal data:",
+      "list": {
+        "access": "Right of access",
+        "rectification": "Right to rectification",
+        "erasure": "Right to erasure",
+        "restriction": "Right to restriction of processing",
+        "portability": "Right to data portability",
+        "objection": "Right to object"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "For questions about personal data protection, you can contact us:"
+    },
+    "changes": {
+      "title": "Policy Changes",
+      "content": "We reserve the right to change this privacy policy. All changes will be published on this page.",
+      "lastUpdated": "Last updated: January 2025."
+    }
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "description": "How we use cookies on our website",
+    "whatAreCookies": {
+      "title": "What are cookies",
+      "content": "Cookies are small text files that are stored on your device when you visit a website. They allow us to remember your settings and improve your user experience."
+    },
+    "typesOfCookies": {
+      "title": "Types of cookies",
+      "essential": {
+        "title": "Essential cookies",
+        "content": "These cookies are necessary for the basic functioning of the website and cannot be disabled."
+      },
+      "analytics": {
+        "title": "Analytics cookies",
+        "content": "We use them to analyze website usage and improve functionality."
+      },
+      "functional": {
+        "title": "Functional cookies",
+        "content": "They allow us to remember your settings and personalize your experience."
+      }
+    },
+    "cookiesUsed": {
+      "title": "Cookies we use",
+      "table": {
+        "name": "Name",
+        "purpose": "Purpose",
+        "duration": "Duration",
+        "sessionPurpose": "User session tracking",
+        "sessionDuration": "Until browser closes",
+        "languagePurpose": "Remember language settings",
+        "languageDuration": "1 year"
+      }
+    },
+    "manageCookies": {
+      "title": "Managing cookies",
+      "content": "You can manage cookies through your browser settings. Please note that disabling certain cookies may affect website functionality.",
+      "note": "We currently do not use a cookie consent banner, but you can manage cookies through browser settings."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "For questions about cookies, you can contact us:"
+    },
+    "changes": {
+      "title": "Policy Changes",
+      "content": "We reserve the right to change this cookie policy. All changes will be published on this page.",
+      "lastUpdated": "Last updated: January 2025."
+    }
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous",
+    "loading": "Loading..."
+  }
+}
+

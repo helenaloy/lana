@@ -1,0 +1,104 @@
+{
+  "name": "Mobile Home Lana / Mobilna kućica Lana",
+  "tagline": {
+    "hr": "Idealno za obiteljski odmor sa mališanima",
+    "en": "Ideal for family vacation with little ones"
+  },
+  "capacity": "4+2",
+  "address": {
+    "street": "Ivana Pavla II 40, Kamp Dalmacija",
+    "city": "23233 Privlaka",
+    "country": "Hrvatska"
+  },
+  "contact": {
+    "email": "lana.mobilehome@gmail.com",
+    "phone": "+385 91 546 0088",
+    "facebook": "https://www.facebook.com/p/Lana-Mobile-Home-100092105512410/",
+    "instagram": "https://instagram.com/mobilehome_lana"
+  },
+  "coordinates": {
+    "lat": 44.2144,
+    "lng": 15.1836
+  },
+  "amenities": [
+    {
+      "icon": "terrace",
+      "label_hr": "Velika natkrivena terasa 24m²",
+      "label_en": "Large Covered Terrace 24m²"
+    },
+    {
+      "icon": "air-conditioning",
+      "label_hr": "Klima s daljinskim (bez nadoplate!)",
+      "label_en": "AC with Remote (no extra charge!)"
+    },
+    {
+      "icon": "beach",
+      "label_hr": "Pješčana plaža kroz kamp",
+      "label_en": "Sandy Beach Through Camp"
+    },
+    {
+      "icon": "parking",
+      "label_hr": "Parking ispred parcele",
+      "label_en": "Parking in Front of Plot"
+    },
+    {
+      "icon": "privacy",
+      "label_hr": "Potpuna privatnost - ključevi samo Vaši",
+      "label_en": "Complete Privacy - Keys Only Yours"
+    },
+    {
+      "icon": "family",
+      "label_hr": "Sigurno za djecu - bez prometnica",
+      "label_en": "Safe for Kids - No Traffic"
+    },
+    {
+      "icon": "shallow",
+      "label_hr": "Plićak 100m - savršeno za mališane",
+      "label_en": "Shallow Sea 100m - Perfect for Kids"
+    },
+    {
+      "icon": "waterpark",
+      "label_hr": "Vodeni park u kampu",
+      "label_en": "Water Park in Camp"
+    },
+    {
+      "icon": "playground",
+      "label_hr": "Dječje igralište",
+      "label_en": "Children's Playground"
+    },
+    {
+      "icon": "restaurant",
+      "label_hr": "Restorani u kampu",
+      "label_en": "Restaurants in Camp"
+    },
+    {
+      "icon": "shop",
+      "label_hr": "Dućan Tommy 400m",
+      "label_en": "Tommy Shop 400m"
+    },
+    {
+      "icon": "medical",
+      "label_hr": "Medicinska ordinacija 100m",
+      "label_en": "Medical Office 100m"
+    }
+  ],
+  "house_rules_hr": [
+    "Check-in: Na recepciji kampa (bez brige hoćemo li biti kod kuće ili spavati 😃)",
+    "Check-out: 10:00",
+    "Ključevi: Samo Vi ih imate - bez inspekcija sobe dok ste na plaži 😀",
+    "Klima: Daljinski je Vaš bez nadoplate (ako potrošite baterije, javite!) 😃",
+    "Maksimalni kapacitet: 4+2 osobe",
+    "Parking: Osigurano mjesto ispred parcele",
+    "Privatnost: Uživajte kao da ste kod kuće 😎"
+  ],
+  "house_rules_en": [
+    "Check-in: At camp reception (no worries if we're home or sleeping 😃)",
+    "Check-out: 10:00 AM",
+    "Keys: Only you have them - no room inspections while you're at the beach 😀",
+    "AC: Remote is yours without extra charge (if batteries run out, let us know!) 😃",
+    "Maximum capacity: 4+2 people",
+    "Parking: Secured spot in front of plot",
+    "Privacy: Enjoy as if you were at home 😎"
+  ]
+}
+

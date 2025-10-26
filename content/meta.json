@@ -1,0 +1,39 @@
+{
+  "home": {
+    "title_hr": "Mobilna kućica Lana - Vaš savršeni bijeg u prirodu",
+    "title_en": "Mobile Home Lana - Your Perfect Escape to Nature",
+    "description_hr": "Uživajte u mirnom odmoru u našoj potpuno opremljenoj mobilnoj kućici. Savršena za obitelji i prijatelje koji traže kombinaciju komfora i prirode.",
+    "description_en": "Enjoy a peaceful vacation in our fully equipped mobile home. Perfect for families and friends seeking a combination of comfort and nature."
+  },
+  "accommodation": {
+    "title_hr": "Smještaj - Mobilna kućica Lana",
+    "title_en": "Accommodation - Mobile Home Lana",
+    "description_hr": "Potpuno opremljena mobilna kućica s 2 spavaće sobe, kuhinjom, kupaonicom, klimom, Wi-Fi-jem i privatnom terasom. Kapacitet do 6 osoba.",
+    "description_en": "Fully equipped mobile home with 2 bedrooms, kitchen, bathroom, air conditioning, Wi-Fi, and private terrace. Capacity up to 6 people."
+  },
+  "gallery": {
+    "title_hr": "Galerija - Mobilna kućica Lana",
+    "title_en": "Gallery - Mobile Home Lana",
+    "description_hr": "Pogledajte fotografije naše mobilne kućice, unutarnjih prostora i okolice.",
+    "description_en": "View photos of our mobile home, interior spaces, and surroundings."
+  },
+  "location": {
+    "title_hr": "Lokacija - Mobilna kućica Lana",
+    "title_en": "Location - Mobile Home Lana",
+    "description_hr": "Pronađite nas na karti i saznajte kako do nas. Udaljenost od plaže samo 300 metara.",
+    "description_en": "Find us on the map and learn how to reach us. Only 300 meters from the beach."
+  },
+  "availability": {
+    "title_hr": "Dostupnost - Mobilna kućica Lana",
+    "title_en": "Availability - Mobile Home Lana",
+    "description_hr": "Provjerite dostupnost i pošaljite upit za rezervaciju. Odaberite datume i kontaktirajte nas.",
+    "description_en": "Check availability and send a booking inquiry. Select your dates and contact us."
+  },
+  "contact": {
+    "title_hr": "Kontakt - Mobilna kućica Lana",
+    "title_en": "Contact - Mobile Home Lana",
+    "description_hr": "Kontaktirajte nas s bilo kakvim pitanjima. Rado ćemo vam pomoći s planiranjem vašeg odmora.",
+    "description_en": "Contact us with any questions. We'll be happy to help you plan your vacation."
+  }
+}
+

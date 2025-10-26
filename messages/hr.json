@@ -1,0 +1,333 @@
+{
+  "navigation": {
+    "home": "Početna",
+    "accommodation": "Smještaj",
+    "gallery": "Galerija",
+    "location": "Lokacija",
+    "availability": "Dostupnost",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "hero": {
+      "title": "Mobilna kućica Lana",
+      "cta": "Ugrabi termin",
+      "ctaSubtext": "Tko prvi—njegov odmor! Ostali gledaju fotke."
+    },
+    "about": {
+      "title": "U slučaju da se ne želite osjećati kao stranac u prostoru koji platite za Vaš odmor.",
+      "subtitle": "Onda je ovo za Vas!",
+      "description": "Mobilna kućica 4+2\n\n🔐 Uživajte u privatnosti.\n\n🏨 Check-in se radi na recepciji kampa - nemate brige da li će netko biti kod kuće ili ne, da li spavamo ili kakve smo volje trenutno.\n\n🔑 Ključeve od kućice imate samo Vi - ne dolazimo Vam u inspekciju sobe kada ste na plaži.\n\n❄️ Daljinski od klime je Vaš tijekom boravka bez nadoplate i prigovaranja. Ako potrošite baterije, javite i poslat ćemo druge.\n\n✅ Na ovaj način smo radili do sada pa ćemo tako i nastaviti.\n⭐ Prednost smo dali gostima od prošle godine i popunili veći dio termina.\n\n🏡 Ono što imamo u ponudi za Vas je novo postavljena kuća za odmor sa velikom natkrivenom terasom od 24 m².\n🏖️ Kuća se nalazi u kampu Dalmacija u Privlaci koji ima svoju pješčanu plažu do koje se dolazi prolazom kroz kamp - nema prometnih ulica koje Vam zadaju glavobolje!\n👶 Vaši mališani mogu se nesmetano kretati od kuće pa sve do pješčane plaže. Nakon ulaska u more nastavlja se idila.\n🏊‍♂️ More je širine 100 metara plićak, ali ako volite dublje, more ima i to!"
+    },
+    "whyUs": {
+      "title": "Zašto baš kod nas?",
+      "subtitle": "Ovo je za Vas ako se ne želite osjećati kao stranac u prostoru koji platite za Vaš odmor.",
+      "reasons": [
+        {
+          "title": "Bez čekanja na recepciji kod kuće",
+          "description": "Check-in radite na recepciji kampa. Nemate brige hoćemo li biti kod kuće, da li spavamo ili kakve smo volje trenutno."
+        },
+        {
+          "title": "Privatnost - stvarna!",
+          "description": "Ključeve imate samo Vi. Ne dolazimo Vam u inspekciju sobe kada ste na plaži. Uživajte kao kod kuće!"
+        },
+        {
+          "title": "Klima bez cjenkanja",
+          "description": "Daljinski od klime je Vaš tijekom boravka bez nadoplate i prigovaranja. Ako potrošite baterije, javite - poslat ćemo druge!"
+        },
+        {
+          "title": "Vaš limeni ljubimac se odmara",
+          "description": "Sve potrebno možete obaviti i bez auta. Dućan, ljekarna, medicinska ordinacija - sve na 100-400m. Auto može konačno odmoriti!"
+        }
+      ]
+    },
+    "features": {
+      "title": "Što nudimo"
+    },
+    "galleryPreview": {
+      "title": "Pogledajte naš smještaj",
+      "viewAll": "Pogledaj sve slike"
+    },
+    "locationPreview": {
+      "title": "Kamp Dalmacija, Privlaka"
+    }
+  },
+  "accommodation": {
+    "title": "Mobile Home 4+2",
+    "description": "Novo postavljena kuća za odmor - Uživajte u privatnosti!",
+    "details": {
+      "title": "Detalji",
+      "capacity": "Kapacitet",
+      "capacityValue": "4+2 osobe",
+      "bedrooms": "Spavaće sobe",
+      "bedroomsValue": "2 spavaće sobe",
+      "bathroom": "Kupaonica",
+      "bathroomValue": "1 kupaonica s tušem",
+      "kitchen": "Kuhinja",
+      "kitchenValue": "Potpuno opremljena",
+      "terrace": "Terasa",
+      "terraceValue": "24m² natkrivena"
+    },
+    "amenities": {
+      "title": "Sadržaji"
+    },
+    "distances": {
+      "title": "Udaljenosti",
+      "beach": "Pješčana plaža",
+      "beachValue": "Prolaz kroz kamp",
+      "waterpark": "Vodeni park",
+      "waterparkValue": "U sklopu kampa",
+      "playground": "Dječje igralište",
+      "playgroundValue": "U sklopu kampa",
+      "restaurant": "Restorani",
+      "restaurantValue": "U sklopu kampa",
+      "medical": "Medicinska ordinacija",
+      "medicalValue": "100 m",
+      "shop": "Dućan Tommy",
+      "shopValue": "400 m",
+      "pharmacy": "Ljekarna",
+      "pharmacyValue": "400 m",
+      "mudBeach": "Plaža s ljekovitim blatom",
+      "mudBeachValue": "400 m"
+    },
+    "houseRules": {
+      "title": "Naš način rada",
+      "subtitle": "Na ovaj način smo radili do sada pa ćemo tako i nastaviti.",
+      "checkIn": "Check-in: Na recepciji kampa (bez brige hoćemo li spavati)",
+      "checkOut": "Check-out: 10:00",
+      "keys": "Ključevi: Samo Vi ih imate - bez inspekcija",
+      "ac": "Klima: Daljinski je Vaš bez nadoplate",
+      "privacy": "Privatnost: Uživajte kao kod kuće!",
+      "parking": "Parking: Osigurano mjesto ispred parcele"
+    },
+    "campFeatures": {
+      "title": "Sadržaji kampa",
+      "beach": "Vlastita pješčana plaža",
+      "shallow": "Plićak 100m - savršeno za djecu",
+      "waterpark": "Vodeni park",
+      "playground": "Dječje igralište",
+      "restaurants": "Restorani",
+      "safety": "Bez prometnica - sigurno za djecu"
+    }
+  },
+  "gallery": {
+    "title": "Galerija",
+    "description": "Pogledajte fotografije naše mobilne kućice i okolice",
+    "noImages": "Nema dostupnih slika"
+  },
+  "location": {
+    "title": "Lokacija",
+    "description": "Pronađite nas na karti",
+    "address": {
+      "title": "Adresa",
+      "street": "Ulica Primera 123",
+      "city": "12345 Primjerski Grad",
+      "country": "Hrvatska"
+    },
+    "directions": {
+      "title": "Upute za dolazak",
+      "text": "Parking je dostupan odmah pored mobilne kućice. Prilaz je moguć svim vozilima."
+    }
+  },
+  "availability": {
+    "title": "Dostupnost i rezervacija",
+    "description": "Provjerite dostupnost i pošaljite upit za rezervaciju",
+    "calendar": {
+      "title": "Kalendar zauzetosti",
+      "legend": {
+        "available": "Dostupno",
+        "booked": "Zauzeto"
+      },
+      "selectDates": "Odaberite datume dolaska i odlaska"
+    },
+    "form": {
+      "title": "Pošaljite upit",
+      "name": "Ime i prezime",
+      "namePlaceholder": "Vaše ime i prezime",
+      "email": "Email",
+      "emailPlaceholder": "vas@email.com",
+      "phone": "Telefon",
+      "phonePlaceholder": "+385 91 546 0088",
+      "guests": "Broj osoba",
+      "guestsPlaceholder": "Odaberite broj osoba",
+      "checkIn": "Dolazak",
+      "checkOut": "Odlazak",
+      "message": "Poruka (opcionalno)",
+      "messagePlaceholder": "Dodatne informacije ili pitanja...",
+      "submit": "Pošalji upit",
+      "submitting": "Šaljem...",
+      "success": "Vaš upit je uspješno poslan! Javit ćemo vam se uskoro.",
+      "error": "Došlo je do greške. Molimo pokušajte ponovno."
+    },
+    "validation": {
+      "nameRequired": "Ime je obavezno",
+      "emailRequired": "Email je obavezan",
+      "emailInvalid": "Neispravan email format",
+      "phoneRequired": "Telefon je obavezan",
+      "guestsRequired": "Broj osoba je obavezan",
+      "guestsMin": "Minimalno 1 osoba",
+      "guestsMax": "Maksimalno 6 osoba",
+      "checkInRequired": "Datum dolaska je obavezan",
+      "checkOutRequired": "Datum odlaska je obavezan",
+      "checkOutAfterCheckIn": "Datum odlaska mora biti nakon datuma dolaska"
+    }
+  },
+  "contact": {
+    "title": "Kontakt & lokacija",
+    "description": "Slobodno nas kontaktirajte s bilo kakvim pitanjima",
+    "info": {
+      "title": "Kontakt informacije",
+      "phone": "Telefon",
+      "email": "Email",
+      "address": "Adresa"
+    },
+    "form": {
+      "title": "Pošaljite poruku",
+      "name": "Ime",
+      "email": "Email",
+      "message": "Poruka",
+      "submit": "Pošalji"
+    }
+  },
+  "footer": {
+    "description": "Bijeg u prirodu bez odricanja: klima radi, roštilj miriši, srdačnost standard.",
+    "rights": "Sva prava pridržana",
+    "links": {
+      "privacy": "Politika privatnosti",
+      "terms": "Uvjeti korištenja"
+    }
+  },
+  "impressum": {
+    "title": "Impressum",
+    "description": "Podaci o tvrtki i kontakt informacije",
+    "company": {
+      "title": "Podaci o tvrtki",
+      "name": "Naziv tvrtke",
+      "address": "Sjedište/adresa",
+      "court": "Nadležni sud",
+      "mbs": "MBS",
+      "oib": "OIB",
+      "euid": "EUID",
+      "status": "Status"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "email": "Email",
+      "phone": "Telefon"
+    },
+    "disclaimer": {
+      "title": "Odricanje odgovornosti",
+      "content": "Sve informacije na ovoj stranici su točne u trenutku objavljivanja. Tvrtka zadržava pravo na promjene bez prethodne najave."
+    }
+  },
+  "privacy": {
+    "title": "Politika privatnosti",
+    "description": "Kako prikupljamo, koristimo i štitimo vaše osobne podatke",
+    "dataController": {
+      "title": "Upravitelj podataka",
+      "content": "Upravitelj vaših osobnih podataka je:"
+    },
+    "dataCollection": {
+      "title": "Prikupljanje podataka",
+      "content": "Prikupljamo sljedeće osobne podatke:",
+      "types": {
+        "name": "Ime i prezime",
+        "email": "Email adresa",
+        "phone": "Broj telefona",
+        "dates": "Datumi dolaska i odlaska",
+        "guests": "Broj gostiju"
+      }
+    },
+    "dataUsage": {
+      "title": "Korištenje podataka",
+      "content": "Vaše osobne podatke koristimo za:",
+      "purposes": {
+        "booking": "Proces rezervacije",
+        "communication": "Komunikaciju s vama",
+        "service": "Pružanje usluga",
+        "legal": "Ispunjavanje zakonskih obveza"
+      }
+    },
+    "dataRetention": {
+      "title": "Zadržavanje podataka",
+      "content": "Vaše osobne podatke zadržavamo onoliko dugo koliko je potrebno za ispunjavanje svrhe za koju su prikupljeni, u skladu s važećim zakonima."
+    },
+    "rights": {
+      "title": "Vaša prava",
+      "content": "Imate sljedeća prava u vezi s vašim osobnim podacima:",
+      "list": {
+        "access": "Pravo na pristup podacima",
+        "rectification": "Pravo na ispravak podataka",
+        "erasure": "Pravo na brisanje podataka",
+        "restriction": "Pravo na ograničenje obrade",
+        "portability": "Pravo na prenosivost podataka",
+        "objection": "Pravo na prigovor"
+      }
+    },
+    "contact": {
+      "title": "Kontakt",
+      "content": "Za pitanja o zaštiti osobnih podataka možete nas kontaktirati:"
+    },
+    "changes": {
+      "title": "Promjene politike",
+      "content": "Zadržavamo pravo na promjenu ove politike privatnosti. Sve promjene će biti objavljene na ovoj stranici.",
+      "lastUpdated": "Zadnje ažuriranje: siječanj 2025."
+    }
+  },
+  "cookies": {
+    "title": "Politika kolačića",
+    "description": "Kako koristimo kolačiće na našoj web stranici",
+    "whatAreCookies": {
+      "title": "Što su kolačići",
+      "content": "Kolačići su male tekstualne datoteke koje se pohranjuju na vašem uređaju kada posjećujete web stranicu. Omogućuju nam da zapamtimo vaše postavke i poboljšamo vaše korisničko iskustvo."
+    },
+    "typesOfCookies": {
+      "title": "Vrste kolačića",
+      "essential": {
+        "title": "Neophodni kolačići",
+        "content": "Ovi kolačići su neophodni za osnovno funkcioniranje web stranice i ne mogu se isključiti."
+      },
+      "analytics": {
+        "title": "Analitički kolačići",
+        "content": "Koristimo ih za analizu korištenja web stranice i poboljšanje funkcionalnosti."
+      },
+      "functional": {
+        "title": "Funkcionalni kolačići",
+        "content": "Omogućuju nam da zapamtimo vaše postavke i personaliziramo vaše iskustvo."
+      }
+    },
+    "cookiesUsed": {
+      "title": "Kolačići koje koristimo",
+      "table": {
+        "name": "Naziv",
+        "purpose": "Svrha",
+        "duration": "Trajanje",
+        "sessionPurpose": "Praćenje sesije korisnika",
+        "sessionDuration": "Do zatvaranja preglednika",
+        "languagePurpose": "Zapamtiti jezične postavke",
+        "languageDuration": "1 godina"
+      }
+    },
+    "manageCookies": {
+      "title": "Upravljanje kolačićima",
+      "content": "Možete upravljati kolačićima kroz postavke svog preglednika. Imajte na umu da isključivanje određenih kolačića može utjecati na funkcionalnost web stranice.",
+      "note": "Trenutno ne koristimo cookie consent banner, ali možete upravljati kolačićima kroz postavke preglednika."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "content": "Za pitanja o kolačićima možete nas kontaktirati:"
+    },
+    "changes": {
+      "title": "Promjene politike",
+      "content": "Zadržavamo pravo na promjenu ove politike kolačića. Sve promjene će biti objavljene na ovoj stranici.",
+      "lastUpdated": "Zadnje ažuriranje: siječanj 2025."
+    }
+  },
+  "common": {
+    "learnMore": "Saznaj više",
+    "close": "Zatvori",
+    "next": "Sljedeće",
+    "previous": "Prethodno",
+    "loading": "Učitavanje..."
+  }
+}
+
