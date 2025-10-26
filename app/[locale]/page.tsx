@@ -87,9 +87,14 @@ export default function HomePage({ params: { locale } }: Props) {
             <h2 className="mb-4 text-center text-3xl font-bold text-gray-900 md:text-4xl">
               {t('about.title')}
             </h2>
-            <h3 className="mb-6 text-center text-xl font-semibold text-primary-600 md:text-2xl">
-              {t('about.subtitle')}
-            </h3>
+            <div className="mb-6 text-center">
+              <p className="text-xl font-semibold text-gray-700 md:text-2xl">
+                {t('about.subtitle').split('\n\n')[0]}
+              </p>
+              <p className="mt-2 text-xl font-bold text-primary-600 md:text-2xl">
+                {t('about.subtitle').split('\n\n')[1]}
+              </p>
+            </div>
             <div className="rounded-lg bg-gray-50 p-8 text-lg text-gray-700 whitespace-pre-line leading-relaxed">
               {t('about.description')}
             </div>
