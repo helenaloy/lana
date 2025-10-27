@@ -141,7 +141,7 @@
       "checkInPlaceholder": "dd/mm/yyyy",
       "checkOut": "Odlazak",
       "checkOutPlaceholder": "dd/mm/yyyy",
-      "message": "Poruka (opcionalno)",
+      "message": "Poruka (neobavezno, ali pomaže nam pogoditi želje)",
       "messagePlaceholder": "Dodatne informacije ili pitanja...",
       "submit": "Pošalji upit",
       "submitting": "Šaljem...",
@@ -263,6 +263,37 @@
       "title": "Promjene politike",
       "content": "Zadržavamo pravo na promjenu ove politike privatnosti. Sve promjene će biti objavljene na ovoj stranici.",
       "lastUpdated": "Zadnje ažuriranje: siječanj 2025."
+    }
+  },
+  "cookieConsent": {
+    "title": "Koristimo kolačiće",
+    "description": "Ova web stranica koristi kolačiće kako bismo poboljšali vaše korisničko iskustvo. Klikom na 'Prihvati sve' pristajete na upotrebu svih kolačića.",
+    "learnMore": "Saznaj više",
+    "acceptAll": "Prihvati sve",
+    "acceptNecessary": "Prihvati samo nužne",
+    "customize": "Prilagodi",
+    "settings": {
+      "title": "Postavke kolačića",
+      "description": "Odaberite koje kolačiće želite prihvatiti.",
+      "alwaysOn": "Uvijek uključeno",
+      "necessary": {
+        "title": "Nužni kolačići",
+        "description": "Ovi kolačići su neophodni za funkcioniranje web stranice."
+      },
+      "analytics": {
+        "title": "Analitički kolačići",
+        "description": "Pomažu nam razumjeti kako posjetitelji koriste našu web stranicu."
+      },
+      "marketing": {
+        "title": "Marketing kolačići",
+        "description": "Korišteni za prikazivanje relevantnog sadržaja i oglašavanja."
+      },
+      "social": {
+        "title": "Društvene mreže",
+        "description": "Omogućuju dijeljenje sadržaja na društvenim mrežama."
+      },
+      "cancel": "Odustani",
+      "save": "Spremi izbore"
     }
   },
   "cookies": {

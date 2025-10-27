@@ -41,15 +41,8 @@ export default function ImpressumPage({ params: { locale } }: Props) {
               
               <div className="mb-8 space-y-4">
                 <div>
-                  <h3 className="mb-2 font-semibold text-gray-700">{t('company.name')}</h3>
-                  <p className="text-gray-600">AMARYLLIS COSMETIC jednostavno društvo s ograničenom odgovornošću za usluge</p>
-                  <p className="text-gray-600">AMARYLLIS COSMETIC j.d.o.o.</p>
-                </div>
-
-                <div>
                   <h3 className="mb-2 font-semibold text-gray-700">{t('company.address')}</h3>
-                  <p className="text-gray-600">Zagreb (Grad Zagreb)</p>
-                  <p className="text-gray-600">Ulica braće Cvijića 21</p>
+                  <p className="text-gray-600">Ulica braće Cvijića 21, 10000 Zagreb</p>
                 </div>
 
                 <div>
@@ -65,6 +58,20 @@ export default function ImpressumPage({ params: { locale } }: Props) {
                 <div>
                   <h3 className="mb-2 font-semibold text-gray-700">{t('company.oib')}</h3>
                   <p className="text-gray-600">95901191963</p>
+                </div>
+
+                <div>
+                  <h3 className="mb-2 font-semibold text-gray-700">
+                    {locale === 'hr' ? 'Temeljni kapital' : 'Share Capital'}
+                  </h3>
+                  <p className="text-gray-600">1,33 EUR (uplaćen u cijelosti)</p>
+                </div>
+
+                <div>
+                  <h3 className="mb-2 font-semibold text-gray-700">
+                    {locale === 'hr' ? 'Direktor' : 'Director'}
+                  </h3>
+                  <p className="text-gray-600">Larisa Grgurić</p>
                 </div>
               </div>
 
