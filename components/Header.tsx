@@ -132,7 +132,7 @@ export default function Header() {
               <circle cx="16" cy="13" r="1.5" strokeLinecap="round"/>
               <path d="M14 13h4M16 11.5v3" strokeLinecap="round"/>
             </svg>
-            <span className={`font-display text-2xl font-bold md:text-3xl transition-colors duration-300 ${
+            <span className={`font-display text-lg font-bold sm:text-xl md:text-3xl transition-colors duration-300 ${
               isScrolled ? 'text-primary-600' : 'text-white drop-shadow-lg'
             }`}>
               Mobile Home Lana
@@ -200,24 +200,16 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className={`border-t py-4 lg:hidden transition-colors duration-300 ${
-            isScrolled ? 'border-gray-200' : 'border-white/30'
-          }`}>
+          <div className="border-t border-gray-200 bg-gray-900 py-4 lg:hidden">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleClick(e, item.href)}
-                className={`block cursor-pointer font-heading text-lg px-4 py-3 transition-colors duration-300 ${
+                className={`block cursor-pointer font-heading text-lg px-4 py-3 text-white transition-colors duration-300 hover:bg-gray-800 ${
                   isActive(item.id)
-                    ? `font-bold ${
-                        isScrolled 
-                          ? 'bg-primary-50 text-primary-600' 
-                          : 'bg-white/20 text-white drop-shadow-lg'
-                      }`
-                    : isScrolled 
-                      ? 'text-gray-700 hover:bg-gray-50' 
-                      : 'text-white hover:bg-white/10 drop-shadow-lg'
+                    ? 'font-bold bg-gray-800'
+                    : ''
                 }`}
               >
                 {item.name}
