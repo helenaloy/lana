@@ -69,9 +69,10 @@ export default function GalleryGrid({ locale }: Props) {
   }
 
   // Get images to display
-  const visibleImages = galleryData.slice(visibleRange.start, visibleRange.end);
+  const numVisible = isMobile ? 1 : 3;
+  const visibleImages = galleryData.slice(visibleRange.start, Math.min(visibleRange.start + numVisible, galleryData.length));
   const canScrollLeft = visibleRange.start > 0;
-  const canScrollRight = visibleRange.end < galleryData.length;
+  const canScrollRight = visibleRange.start < galleryData.length - numVisible;
 
   return (
     <>
@@ -89,7 +90,7 @@ export default function GalleryGrid({ locale }: Props) {
           </button>
         )}
 
-        {/* Gallery grid - 3 on desktop, 1 on mobile */}
+        {/* Gallery grid - 1 on mobile, 3 on desktop */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {visibleImages.map((image, index) => {
             const actualIndex = visibleRange.start + index;
