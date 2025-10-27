@@ -200,22 +200,31 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="border-t border-gray-200 bg-gray-900 py-4 lg:hidden">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                onClick={(e) => handleClick(e, item.href)}
-                className={`block cursor-pointer font-heading text-lg px-4 py-3 text-white transition-colors duration-300 hover:bg-gray-800 ${
-                  isActive(item.id)
-                    ? 'font-bold bg-gray-800'
-                    : ''
-                }`}
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
+          <>
+            {/* Backdrop */}
+            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden" onClick={() => setIsMobileMenuOpen(false)} />
+            
+            {/* Menu Overlay */}
+            <div className="fixed inset-x-4 top-20 rounded-2xl bg-gray-900 shadow-2xl py-4 z-50 lg:hidden animate-in slide-in-from-top-4 fade-in duration-200">
+              {navigation.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => {
+                    handleClick(e, item.href);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`block cursor-pointer font-heading text-lg px-6 py-3 text-white transition-colors duration-300 hover:bg-gray-800 mx-2 rounded-lg ${
+                    isActive(item.id)
+                      ? 'font-bold bg-gray-800'
+                      : ''
+                  }`}
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </>
         )}
       </nav>
     </header>
