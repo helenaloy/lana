@@ -205,7 +205,7 @@ export default function Header() {
             <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden" onClick={() => setIsMobileMenuOpen(false)} />
             
             {/* Menu Overlay */}
-            <div className="fixed inset-x-4 top-20 rounded-2xl bg-gray-900 shadow-2xl py-4 z-50 lg:hidden animate-in slide-in-from-top-4 fade-in duration-200">
+            <div className="fixed inset-x-4 top-20 rounded-2xl bg-primary-600 shadow-2xl py-4 z-50 lg:hidden animate-in slide-in-from-top-4 fade-in duration-200">
               {navigation.map((item) => (
                 <a
                   key={item.name}
@@ -214,9 +214,9 @@ export default function Header() {
                     handleClick(e, item.href);
                     setIsMobileMenuOpen(false);
                   }}
-                  className={`block cursor-pointer font-heading text-lg px-6 py-3 text-white transition-colors duration-300 hover:bg-gray-800 mx-2 rounded-lg ${
+                  className={`block cursor-pointer font-heading text-lg px-6 py-3 text-white transition-colors duration-300 hover:bg-primary-700 mx-2 rounded-lg ${
                     isActive(item.id)
-                      ? 'font-bold bg-gray-800'
+                      ? 'font-bold bg-primary-700'
                       : ''
                   }`}
                 >
