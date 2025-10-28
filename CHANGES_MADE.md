@@ -19,7 +19,7 @@ Dodao sam Vaš humorističan tekst i prilagodio cijeli website da bude živahnij
   - Velika natkrivena terasa 24m²
   - Klima s daljinskim (bez nadoplate!)
   - Pješčana plaža kroz kamp
-  - Plićak 100m - savršeno za mališane
+  - Plićak 200m - savršeno za mališane
   - Vodeni park u kampu
   - Dječje igralište
   - Potpuna privatnost
@@ -53,7 +53,7 @@ Dodao sam Vaš humorističan tekst i prilagodio cijeli website da bude živahnij
 **home.campInfo** - "Kamp Dalmacija, Privlaka"
 - Opis kampa i plaže
 - "Savršeno za mališane" sekcija
-- Plićak 100m, bez prometnica
+- Plićak 200m, bez prometnica
 
 **accommodation** - Prošireno:
 - "Mobile Home 4+2" kao naslov
@@ -210,7 +210,7 @@ http://localhost:3000/hr
 | "Novo postavljena kuća s terasom 24m" | About opis + Accommodation opis |
 | "Kamp Dalmacija u Privlaci" | Novi Camp Info + Location |
 | "Pješčana plaža kroz kamp" | Camp Info + Camp Features + Amenities |
-| "Plićak 100m" | Camp Info opis + Amenities |
+| "Plićak 200m" | Camp Info opis + Amenities |
 | "Vodeni park, dječje igralište..." | Camp Features sekcija |
 | "Medicinska ordinacija 100m, dućan 400m..." | Distances sekcija |
 | "Plaža s ljekovitim blatom 400m" | Distances sekcija |

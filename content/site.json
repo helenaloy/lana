@@ -58,8 +58,8 @@
     },
     {
       "icon": "beach",
-      "label_hr": "Pješčana plaža kroz kamp",
-      "label_en": "Sandy Beach Through Camp"
+      "label_hr": "200m do pješčane plaže",
+      "label_en": "200m to Sandy Beach"
     },
     {
       "icon": "privacy",
@@ -72,9 +72,9 @@
       "label_en": "Safe for Kids - No Traffic"
     },
     {
-      "icon": "shallow",
-      "label_hr": "Plićak 100m - savršeno za mališane",
-      "label_en": "Shallow Sea 100m - Perfect for Kids"
+      "icon": "dishwasher",
+      "label_hr": "Perilica posuđa",
+      "label_en": "Dishwasher"
     },
     {
       "icon": "waterpark",
