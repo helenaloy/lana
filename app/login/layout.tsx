@@ -1,5 +1,7 @@
 import AuthHeader from '@/components/AuthHeader';
 
+export const dynamic = 'force-dynamic';
+
 export default function LoginLayout({
   children,
 }: {
