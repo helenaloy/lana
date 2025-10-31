@@ -10,6 +10,7 @@ import AmenityList from '@/components/AmenityList';
 import GalleryGrid from '@/components/GalleryGrid';
 import MapComponent from '@/components/MapComponent';
 import AvailabilitySection from '@/components/AvailabilitySection';
+import AboutSectionText from '@/components/AboutSectionText';
 
 type Props = {
   params: { locale: string };
@@ -89,9 +90,7 @@ export default function HomePage({ params: { locale } }: Props) {
                 {t('about.subtitle')}
               </p>
             </div>
-            <div className="rounded-lg bg-gray-50 p-8 text-lg text-gray-700 whitespace-pre-line leading-relaxed">
-              {t('about.description')}
-            </div>
+            <AboutSectionText />
           </div>
         </div>
       </section>
