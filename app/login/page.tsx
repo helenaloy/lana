@@ -1,15 +1,47 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabaseClient';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [ready, setReady] = useState(false);
+  const [initError, setInitError] = useState<string | null>(null);
   const router = useRouter();
+
+  // Check if user is already logged in on mount
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const { data, error: authError } = await supabase.auth.getUser();
+        
+        if (authError) {
+          console.error('Auth check error:', authError);
+        }
+        
+        if (data?.user) {
+          router.replace('/dashboard');
+          return;
+        }
+        
+        setReady(true);
+      } catch (err) {
+        const errMsg = err instanceof Error ? err.message : 'Neočekivana greška pri provjeri autentifikacije';
+        console.error('Error checking auth:', err);
+        setInitError(errMsg);
+        setReady(true);
+      }
+    };
+
+    checkAuth();
+  }, [router]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,20 +55,49 @@ export default function LoginPage() {
       });
 
       if (signInError) {
-        setError(signInError.message);
+        const errMsg = signInError.message || 'Greška pri prijavi';
+        setError(errMsg);
+        console.error('Login error:', signInError);
         return;
       }
 
-      if (data.user) {
-        router.push('/dashboard');
+      if (data?.user) {
+        router.replace('/dashboard');
       }
     } catch (err) {
-      setError('Dogodila se neočekivana greška');
-      console.error(err);
+      const errMsg = err instanceof Error ? err.message : 'Dogodila se neočekivana greška';
+      setError(errMsg);
+      console.error('Unexpected login error:', err);
     } finally {
       setLoading(false);
     }
   };
+
+  // Show loading while checking auth status
+  if (!ready) {
+    return (
+      <main style={{ padding: 16, minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div>Učitavanje login stranice…</div>
+      </main>
+    );
+  }
+
+  // Show init error if there was a problem
+  if (initError) {
+    return (
+      <main style={{ padding: 16, minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ textAlign: 'center' }}>
+          <p style={{ color: 'crimson', marginBottom: 16 }}>Greška: {initError}</p>
+          <button 
+            onClick={() => window.location.reload()} 
+            style={{ padding: '8px 16px', cursor: 'pointer' }}
+          >
+            Osvježi stranicu
+          </button>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100 py-12 px-4">
@@ -79,8 +140,8 @@ export default function LoginPage() {
             </div>
 
             {error && (
-              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
-                {error}
+              <div>
+                <p style={{ color: 'crimson', fontSize: '14px', marginTop: '8px' }}>Greška: {error}</p>
               </div>
             )}
 
@@ -106,4 +167,3 @@ export default function LoginPage() {
     </div>
   );
 }
-

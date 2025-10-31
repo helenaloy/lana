@@ -7,6 +7,9 @@ import AboutEditor from '@/components/dashboard/AboutEditor';
 import AccommodationEditor from '@/components/dashboard/AccommodationEditor';
 import ImageGallery from '@/components/dashboard/ImageGallery';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default function DashboardPage() {
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -21,14 +24,14 @@ export default function DashboardPage() {
         } = await supabase.auth.getUser();
 
         if (error || !currentUser) {
-          router.push('/login');
+          router.replace('/login');
           return;
         }
 
         setUser(currentUser);
       } catch (err) {
         console.error('Error checking user:', err);
-        router.push('/login');
+        router.replace('/login');
       } finally {
         setLoading(false);
       }
@@ -40,7 +43,7 @@ export default function DashboardPage() {
   const handleLogout = async () => {
     try {
       await supabase.auth.signOut();
-      router.push('/login');
+      router.replace('/login');
     } catch (err) {
       console.error('Error logging out:', err);
     }
@@ -58,7 +61,13 @@ export default function DashboardPage() {
   }
 
   if (!user) {
-    return null;
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100">
+        <div className="text-center">
+          <p className="text-gray-600">Preusmjeravanje na prijavu…</p>
+        </div>
+      </div>
+    );
   }
 
   return (
